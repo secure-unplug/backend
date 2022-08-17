@@ -30,7 +30,6 @@ ALLOWED_HOSTS = ['*']
 CORS_ALLOWED_ORIGINS = [
     # 허용할 Origin 추가
     "http://localhost:8080",
-    ...
 ]
 CORS_ORIGIN_WHITELIST = ['http://127.0.0.1:3000' ,'https://localhost:3000','http://localhost:8000/login','http://localhost:3000/' ]
 CORS_ALLOW_CREDENTIALS = True
@@ -46,8 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'electricity',
-    'user',
-    'corsheaders'
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
