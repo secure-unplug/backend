@@ -7,3 +7,4 @@ Markdown==3.4.1
 pytz==2022.2.1
 sqlparse==0.4.2
 tzdata==2022.2
+django-cors-headers==3.13.0
