@@ -7,3 +7,5 @@ class Entries(models.Model):
     created_at = models.DateTimeField(default=datetime.now())
     class Meta:
         db_table="index"
+    def __str__(self):
+        return f'[{self.uuid}]{self.created_at}'
