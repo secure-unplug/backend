@@ -10,6 +10,7 @@ class User(models.Model):
     password = models.CharField(max_length=256, null=False)
     email = models.CharField(max_length=256, unique=True, null=False)
     name = models.CharField(max_length=50)
+    uuid = models.UUIDField(unique=True, null=False)
 
     created_at = models.DateTimeField(default=timezone.now, editable=False)
     updated_at = models.DateTimeField(default=timezone.now)

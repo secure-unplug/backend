@@ -14,7 +14,7 @@ from user.decorator import authenticated
 
 
 @api_view(['POST'])
-@authenticated
+#@authenticated
 def save_entries(request):
     body = json.loads(request.body.decode('utf-8'))
     info = Entries(uuid=body['uuid'], watt=body['watt'])
@@ -24,12 +24,14 @@ def save_entries(request):
 
 
 @api_view(['GET'])
+@authenticated
 def view_entries(request):
-    uuid = "asde"  ##request.user.uuid 이런식으로 uuid 받아오기.
-    body = json.loads(request.body.decode('utf-8'))
+    uuid = request.user.uuid #이런식으로 uuid 받아오기.
+    start_date = request.GET['start_date']
+    end_date = request.GET['end_date']
 
-    start_date = datetime.strptime(body['start_date'], "%Y-%m-%d")
-    end_date = datetime.strptime(body['end_date'], "%Y-%m-%d")
+    start_date = datetime.strptime(start_date, "%Y-%m-%d")
+    end_date = datetime.strptime(end_date, "%Y-%m-%d")
 
     data = Entries.objects.filter(uuid=uuid, created_at__range=(start_date, end_date)).order_by('-created_at', '-id')
 
@@ -37,9 +39,10 @@ def view_entries(request):
 
 
 @api_view(['GET'])
+@authenticated
 def view_average(request):
-    body = json.loads(request.body.decode('utf-8'))
-    data = Metadata.objects.filter(month=body['month'])
+    month = request.GET['month']
+    data = Metadata.objects.filter(month=month)
     fee, tex_1, tex_2, total = calc((data.values()[0]['average_Kwatt']))
     money = dict(fee=fee, tex_1=tex_1, tex_2=tex_2, total=total)
     # return Response(data.values())

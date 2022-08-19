@@ -11,7 +11,7 @@ import json
 from .models import User
 from django.db import IntegrityError
 from dotenv import load_dotenv
-import os
+import uuid
 
 # load .env
 load_dotenv()
@@ -61,7 +61,8 @@ def join(request):
     if email_validation:
         return Response({"message": "이메일이 이미 존재합니다."})
 
-    user = User(username=dto.username, password=dto.password, email=dto.email, name=dto.name)
+    user = User(username=dto.username, password=dto.password, email=dto.email, name=dto.name, uuid=uuid.uuid4())
+    
     user.save()
 
     return Response({"message": "회원가입에 성공했습니다!"}, status=status.HTTP_201_CREATED)
