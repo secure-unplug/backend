@@ -10,9 +10,11 @@ import json
 from datetime import datetime
 from .models import Metadata
 from .elec_calc import calc
+from user.decorator import authenticated
 
 
 @api_view(['POST'])
+@authenticated
 def save_entries(request):
     body = json.loads(request.body.decode('utf-8'))
     info = Entries(uuid=body['uuid'], watt=body['watt'])
