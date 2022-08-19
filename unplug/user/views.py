@@ -1,3 +1,4 @@
+from sys import exec_prefix
 from django.db.models import Q
 from django.shortcuts import render
 from rest_framework import status
@@ -35,9 +36,9 @@ class JoinRequest:
 @api_view(['POST'])
 def login(request):
     dto = LoginRequest(json.loads(request.body))
-
-    user = User.objects.get(Q(username=dto.username) & Q(password=dto.password))
-    if not user:
+    try:
+        user = User.objects.get(Q(username=dto.username) & Q(password=dto.password))
+    except:
         return Response({"message": "로그인에 실패했습니다."}, status=status.HTTP_401_UNAUTHORIZED)
 
     token = token_encode(user)
