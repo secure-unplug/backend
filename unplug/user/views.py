@@ -15,7 +15,7 @@ from django.db import IntegrityError
 from dotenv import load_dotenv
 import uuid
 from django.core import serializers
-
+from electricity.models import Entries
 # load .env
 load_dotenv()
 
@@ -65,10 +65,11 @@ def join(request):
         return Response({"message": "이메일이 이미 존재합니다."})
 
     user = User(username=dto.username, password=dto.password, email=dto.email, name=dto.name)
-    
+
     user.save()
 
     return Response({"message": "회원가입에 성공했습니다!"}, status=status.HTTP_201_CREATED)
+
 
 @api_view(["POST"])
 @authenticated
@@ -86,7 +87,41 @@ def add_device(request):
 def get_device_list(request):
     return Response({"serial": request.user.device.serial})
 
+
 @api_view(['DELETE'])
 @authenticated
 def user_delete(request):
+    pass
+
+
+@api_view(["GET"])
+@authenticated
+def get_friends_list(request):
+    result = []
+    for i in [value['username'] for value in request.user.friends.all().values()]:
+        result.append(i)
+    return Response(result)
+    # request.user.friends.all().values()
+
+
+@api_view(["GET"])
+@authenticated
+def get_friends_entries(request):
+    result=[]
+    result2=[]
+    for i in [value['id'] for value in request.user.friends.all().values()]:
+        devices = Device.objects.filter(user_id=User.objects.get(id=i)).values()
+        if devices is not None:
+            for j in devices:
+                result.append(j['serial'])
+    for k in result:
+        result2.append((Entries.objects.filter(serial=k).values()))
+
+    return Response(result2)
+
+
+
+@api_view(["POST"])
+@authenticated
+def add_friends(request):
     pass

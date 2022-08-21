@@ -14,6 +14,8 @@ class User(models.Model):
     created_at = models.DateTimeField(default=timezone.now, editable=False)
     updated_at = models.DateTimeField(default=timezone.now)
 
+    friends = models.ManyToManyField('self')
+
     def str(self):
         return f'{self.username}계정'
 
