@@ -27,8 +27,7 @@ def save_entries(request):
 @api_view(['GET'])
 @authenticated
 def view_entries(request):
-    # uuid = request.user.uuid #이런식으로 uuid 받아오기.
-    # print(uuid)
+    print(request.user)
     device = request.user.device
     start_date = request.GET['start_date']
     end_date = request.GET['end_date']
@@ -36,8 +35,7 @@ def view_entries(request):
     start_date = datetime.strptime(start_date, "%Y-%m-%d")
     end_date = datetime.strptime(end_date, "%Y-%m-%d")
 
-    data = Entries.objects.filter(serial=device, created_at__range=(start_date, end_date)).order_by('-created_at',
-                                                                                                    '-id')
+    data = Entries.objects.filter(serial=device, created_at__range=(start_date, end_date)).order_by('-created_at','-id')
 
     return Response(data.values())
 
@@ -63,7 +61,7 @@ def view_average_money(request):
 @api_view(['GET'])
 @authenticated
 def view_device_data(request):
-    return Response([{"serial": value['serial']} for value in request.user.device.all().values()])
+    return Response([{"serial": value['serial'], "device_name": value['device_name']} for value in request.user.device.all().values()])
 
 
 @api_view(['GET'])

@@ -76,7 +76,7 @@ def join(request):
 def add_device(request):
     body = json.loads(request.body)
     device = body['device']
-    device = Device(serial=device, user_id=request.user)
+    device = Device(serial=device, user_id=request.user, device_name=body['device_name'])
     device.save()
 
     return Response({"message": "디바이스 추가에 성공했습니다."})

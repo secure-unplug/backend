@@ -23,6 +23,6 @@ class User(models.Model):
 class Device(models.Model):
     serial = models.UUIDField(primary_key=True)
     user_id = models.ForeignKey(User, on_delete=models.CASCADE, db_column='user_id', related_name="device")
-
+    device_name = models.CharField(max_length=50)
     def str(self):
         return f'{self.user_id.username}의 device (: {self.serial[:6]}..)'
