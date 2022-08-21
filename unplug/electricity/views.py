@@ -11,13 +11,14 @@ from datetime import datetime
 from .models import Metadata
 from .elec_calc import calc
 from user.decorator import authenticated
+from user.models import User
 
 
 @api_view(['POST'])
 #@authenticated
 def save_entries(request):
     body = json.loads(request.body.decode('utf-8'))
-    info = Entries(uuid=body['uuid'], watt=body['watt'])
+    info = Entries(serial=body['serial'], watt=body['watt'])
     info.save()
 
     return Response(status=status.HTTP_201_CREATED)
@@ -26,14 +27,17 @@ def save_entries(request):
 @api_view(['GET'])
 @authenticated
 def view_entries(request):
-    uuid = request.user.uuid #이런식으로 uuid 받아오기.
+    #uuid = request.user.uuid #이런식으로 uuid 받아오기.
+    #print(uuid)
+    device = request.user.device
+    print(device)
     start_date = request.GET['start_date']
     end_date = request.GET['end_date']
 
     start_date = datetime.strptime(start_date, "%Y-%m-%d")
     end_date = datetime.strptime(end_date, "%Y-%m-%d")
 
-    data = Entries.objects.filter(uuid=uuid, created_at__range=(start_date, end_date)).order_by('-created_at', '-id')
+    data = Entries.objects.filter(serial=device, created_at__range=(start_date, end_date)).order_by('-created_at', '-id')
 
     return Response(data.values())
 
@@ -47,3 +51,17 @@ def view_average(request):
     money = dict(fee=fee, tex_1=tex_1, tex_2=tex_2, total=total)
     # return Response(data.values())
     return Response(money)
+
+@api_view(['GET'])
+@authenticated
+def view_device_data(request):
+    return Response([{"serial": value['serial']} for value in request.user.device.all().values()])
+
+
+@api_view(['GET'])
+@authenticated
+def view_my_entries(request):
+    result = []
+    for i in [value['serial'] for value in request.user.device.all().values()]:
+        result.append(Entries.objects.filter(serial=i).values())
+    return Response(result)

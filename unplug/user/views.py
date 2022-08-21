@@ -1,3 +1,4 @@
+import re
 from sys import exec_prefix
 from django.db.models import Q
 from django.shortcuts import render
@@ -9,10 +10,11 @@ from rest_framework.decorators import api_view
 from .decorator import authenticated
 from .token import token_encode
 import json
-from .models import User
+from .models import User, Device
 from django.db import IntegrityError
 from dotenv import load_dotenv
 import uuid
+from django.core import serializers
 
 # load .env
 load_dotenv()
@@ -62,12 +64,27 @@ def join(request):
     if email_validation:
         return Response({"message": "이메일이 이미 존재합니다."})
 
-    user = User(username=dto.username, password=dto.password, email=dto.email, name=dto.name, uuid=uuid.uuid4())
+    user = User(username=dto.username, password=dto.password, email=dto.email, name=dto.name)
     
     user.save()
 
     return Response({"message": "회원가입에 성공했습니다!"}, status=status.HTTP_201_CREATED)
 
+@api_view(["POST"])
+@authenticated
+def add_device(request):
+    body = json.loads(request.body)
+    device = body['device']
+    device = Device(serial=device, user_id=request.user)
+    device.save()
+
+    return Response({"message": "디바이스 추가에 성공했습니다."})
+
+
+@api_view(["GET"])
+@authenticated
+def get_device_list(request):
+    return Response({"serial": request.user.device.serial})
 
 @api_view(['DELETE'])
 @authenticated

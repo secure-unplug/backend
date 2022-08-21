@@ -1,10 +1,12 @@
+from operator import mod
+from re import L
 from django.db import models
 from datetime import datetime
 from django.core.validators import MinValueValidator, MaxValueValidator
 
 
 class Entries(models.Model):
-    uuid = models.CharField(max_length=200)
+    serial = models.UUIDField(null=False)
     watt = models.IntegerField()
     created_at = models.DateTimeField(default=datetime.now())
 
@@ -12,7 +14,7 @@ class Entries(models.Model):
         db_table = "index"
 
     def __str__(self):
-        return f'[{self.uuid}]{self.created_at}'
+        return f'[{self.serial}]{self.created_at}'
 
 
 class Metadata(models.Model):
