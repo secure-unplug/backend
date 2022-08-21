@@ -6,6 +6,6 @@ urlpatterns = [
     path('join', join),
     path('devices', get_device_list),
     path('add_device', add_device),
-    path('get_friends_list', get_friends_list),
-    path('get_friends_entries', get_friends_entries)
+    path('friends_list', get_friends_list),
+    path('friends_entries', get_friends_entries)
 ]
