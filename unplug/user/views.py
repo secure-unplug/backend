@@ -125,3 +125,8 @@ def get_friends_entries(request):
 @authenticated
 def add_friends(request):
     pass
+
+@api_view(["POST"])
+@authenticated
+def get_user_info(request):
+    return Response({"id": request.user.id, "email": request.user.email,"username": request.user.username,"name": request.user.name})
