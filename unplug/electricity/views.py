@@ -86,15 +86,16 @@ def view_device_data(request):
     return Response([{"serial": value['serial'], "device_name": value['device_name']} for value in
                      request.user.device.all().values()])
 
-
+'''
 @api_view(['GET'])
 @authenticated
+
 def view_my_entries(request):
     result = []
     for i in [value['serial'] for value in request.user.device.all().values()]:
         result.append(Entries.objects.filter(serial=i).values())
     return Response(result)
-
+'''
 
 @api_view(['GET'])
 @authenticated
