@@ -12,6 +12,7 @@ from .models import Metadata
 from .elec_calc import calc
 from user.decorator import authenticated
 from user.models import User
+from dateutil.relativedelta import relativedelta
 
 
 @api_view(['POST'])
@@ -48,7 +49,7 @@ def view_period_average(request):
     print(device_list[0])
     start_date = request.GET['start_date']
     end_date = request.GET['end_date']
-    serial= request.GET['serial']
+    serial = request.GET['serial']
     print(serial)
     start_date = datetime.strptime(start_date, "%Y-%m-%d")
     end_date = datetime.strptime(end_date, "%Y-%m-%d")
@@ -58,8 +59,30 @@ def view_period_average(request):
         date1 = datetime.strptime(date, "%Y-%m-%d")
         date2 = datetime.strptime(date, "%Y-%m-%d") + timedelta(days=1) - timedelta(microseconds=1)
         data.append(Entries.objects.filter(serial=serial, created_at__range=(date1, date2)).order_by('-created_at',
-                                                                                            '-id').values())
+                                                                                                     '-id').values())
     return Response(data)
+
+
+@api_view(['GET'])
+@authenticated
+def view_device_fee(request):
+    today = datetime.now()
+    serial = request.GET['serial']
+    total_watt = 0
+    month_first = datetime(today.year, today.month, 1).strftime("%Y-%m-%d")
+    month_last = (datetime(today.year, today.month, 1) + relativedelta(months=1) - relativedelta(seconds=1)).strftime(
+        "%Y-%m-%d")
+    data = Entries.objects.filter(serial=serial, created_at__range=(
+        month_first, month_last)).order_by(
+        '-created_at',
+        '-id')
+    j = 0
+    for i in data:
+        total_watt += data[j].watt
+        j += 1
+    fee = calc(total_watt / 1000)
+    print(total_watt / 1000)
+    return Response(fee)
 
 
 @api_view(['GET'])
@@ -86,6 +109,7 @@ def view_device_data(request):
     return Response([{"serial": value['serial'], "device_name": value['device_name']} for value in
                      request.user.device.all().values()])
 
+
 '''
 @api_view(['GET'])
 @authenticated
@@ -97,6 +121,7 @@ def view_my_entries(request):
     return Response(result)
 '''
 
+
 @api_view(['GET'])
 @authenticated
 def get_kwatt_level(request):
@@ -107,6 +132,9 @@ def get_kwatt_level(request):
     device_list = [value['serial'] for value in request.user.device.all().values()]
     earth_level = []
     total_watt = 0
+    print(kwatt)
+    day_average = day_average * 1000 / 24
+    # day_average는 kwh단위, w = kwh x 1000 / 시간
     j = 0
     for i in device_list:
         data = Entries.objects.filter(serial=device_list[j], created_at__range=(
@@ -114,22 +142,22 @@ def get_kwatt_level(request):
             '-created_at',
             '-id')
         for t in data:
-            total_watt += t.watt
+            total_watt += t.watt * 3
+            # 아두이노에서 3분마다 watt 평균을 보내기 때문에 3을 곱해줌
         j += 1
-        total_kwatt = total_watt / 1000
-        if day_average * 1.4 < total_kwatt:
+        if day_average * 1.4 < total_watt:
             earth_level.append(5)
-        elif day_average * 1.2 < total_kwatt <= day_average * 1.4:
+        elif day_average * 1.2 < total_watt <= day_average * 1.4:
             earth_level.append(4)
-        elif day_average < total_kwatt <= day_average * 1.2:
+        elif day_average < total_watt <= day_average * 1.2:
             earth_level.append(3)
-        elif day_average * 0.8 < total_kwatt <= day_average:
+        elif day_average * 0.8 < total_watt <= day_average:
             earth_level.append(2)
-        elif day_average * 0.6 < total_kwatt <= day_average * 0.8:
+        elif day_average * 0.6 < total_watt <= day_average * 0.8:
             earth_level.append(1)
-        elif total_kwatt <= day_average * 0.6:
+        elif total_watt <= day_average * 0.6:
             earth_level.append(1)
-        print(total_kwatt)
+        print(total_watt)
         total_watt = 0
 
     # total_kwatt = total_watt / 1000
