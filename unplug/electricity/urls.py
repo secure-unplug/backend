@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import save_entries, view_entries, view_average_money, view_device_data, view_my_entries, view_average_kwatt, get_kwatt_level
+from .views import save_entries, view_entries, view_average_money, view_device_data, view_my_entries, view_average_kwatt, get_kwatt_level, view_period_average
 
 urlpatterns = [
     path('list', view_entries),
@@ -8,5 +8,6 @@ urlpatterns = [
     path('device_data', view_device_data),
     path('my_entries', view_my_entries),
     path('average_kwatt', view_average_kwatt),
-    path('kwatt_level', get_kwatt_level)
+    path('kwatt_level', get_kwatt_level),
+    path('period_average',view_period_average)
 ]

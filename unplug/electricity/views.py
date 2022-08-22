@@ -27,19 +27,39 @@ def save_entries(request):
 @api_view(['GET'])
 @authenticated
 def view_entries(request):
-    print(request.user)
-    device = request.user.device.values()[0]['serial']
-    print(device)
+    device_list = [value['serial'] for value in request.user.device.all().values()]
+    print(device_list)
     start_date = request.GET['start_date']
     end_date = request.GET['end_date']
-
     start_date = datetime.strptime(start_date, "%Y-%m-%d")
     end_date = datetime.strptime(end_date, "%Y-%m-%d")
+    data = []
+    for i in device_list:
+        data.append(Entries.objects.filter(serial=i, created_at__range=(start_date, end_date)).order_by('-created_at',
+                                                                                                        '-id').values())
 
-    data = Entries.objects.filter(serial=device, created_at__range=(start_date, end_date)).order_by('-created_at',
-                                                                                                    '-id')
+    return Response(data)
 
-    return Response(data.values())
+
+@api_view(['GET'])
+@authenticated
+def view_period_average(request):
+    device_list = [value['serial'] for value in request.user.device.all().values()]
+    print(device_list[0])
+    start_date = request.GET['start_date']
+    end_date = request.GET['end_date']
+    serial= request.GET['serial']
+    print(serial)
+    start_date = datetime.strptime(start_date, "%Y-%m-%d")
+    end_date = datetime.strptime(end_date, "%Y-%m-%d")
+    dates = [(start_date + timedelta(days=i)).strftime("%Y-%m-%d") for i in range((end_date - start_date).days + 1)]
+    data = []
+    for date in dates:
+        date1 = datetime.strptime(date, "%Y-%m-%d")
+        date2 = datetime.strptime(date, "%Y-%m-%d") + timedelta(days=1) - timedelta(microseconds=1)
+        data.append(Entries.objects.filter(serial=serial, created_at__range=(date1, date2)).order_by('-created_at',
+                                                                                            '-id').values())
+    return Response(data)
 
 
 @api_view(['GET'])
@@ -111,7 +131,7 @@ def get_kwatt_level(request):
         print(total_kwatt)
         total_watt = 0
 
-    #total_kwatt = total_watt / 1000
+    # total_kwatt = total_watt / 1000
 
     print(day_average)
 
