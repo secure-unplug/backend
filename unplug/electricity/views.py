@@ -24,7 +24,7 @@ def save_entries(request):
     if valid_uuid.search(body['serial']) is None:
         return Response({"Not in valid serial format"})
     if type(body['watt']) != int:
-        return Response("watt is not integer type")
+        return Response({"watt is not integer type"})
     info.save()
     return Response(status=status.HTTP_201_CREATED)
 
@@ -42,11 +42,11 @@ def view_entries(request):
     try:
         datetime.strptime(start_date, '%Y-%m-%d')
     except ValueError:
-        return Response("Not in valid date format")
+        return Response({"Not in valid date format"})
     try:
         datetime.strptime(end_date, '%Y-%m-%d')
     except ValueError:
-        return Response("Not in valid date format")
+        return Response({"Not in valid date format"})
     start_date = datetime.strptime(start_date, "%Y-%m-%d")
     end_date = datetime.strptime(end_date, "%Y-%m-%d")
     data = []
@@ -70,11 +70,11 @@ def view_period_average(request):
     try:
         datetime.strptime(start_date, '%Y-%m-%d')
     except ValueError:
-        return Response("Not in valid date format")
+        return Response({"Not in valid date format"})
     try:
         datetime.strptime(end_date, '%Y-%m-%d')
     except ValueError:
-        return Response("Not in valid date format")
+        return Response({"Not in valid date format"})
     # serial 포맷 유효성 검사
     valid_uuid = re.compile('[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}')
     if valid_uuid.search(serial) is None:
@@ -136,7 +136,7 @@ def view_average_money(request):
     try:
         datetime.strptime(month, '%m')
     except ValueError:
-        return Response("Not in valid month format")
+        return Response({"Not in valid month format"})
     data = Metadata.objects.filter(month=month)
     fee, tex_1, tex_2, total = calc((data.values()[0]['average_Kwatt']))
     money = dict(fee=fee, tex_1=tex_1, tex_2=tex_2, total=total)
