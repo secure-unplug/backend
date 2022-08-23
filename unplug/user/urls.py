@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import login, join, get_device_list, add_device, get_friends_list, get_friends_entries, get_user_info, update_userinfo
+from .views import login, join, get_device_list, add_device, get_friends_list, get_friends_entries, get_user_info, update_userinfo, user_delete
 
 urlpatterns = [
     path('login', login),
@@ -9,5 +9,6 @@ urlpatterns = [
     path('get_user_info', get_user_info),
     path('friends_list', get_friends_list),
     path('friends_entries', get_friends_entries),
-    path('update_userinfo', update_userinfo)
+    path('update_userinfo', update_userinfo),
+    path('user_delete', user_delete)
 ]

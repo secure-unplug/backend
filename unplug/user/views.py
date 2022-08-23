@@ -127,7 +127,8 @@ def get_device_list(request):
 @api_view(['DELETE'])
 @authenticated
 def user_delete(request):
-    pass
+    User.objects.get(username=request.user.username).delete()
+    return Response({"회원탈퇴 완료"},status=status.HTTP_204_NO_CONTENT)
 
 
 @api_view(["GET"])
