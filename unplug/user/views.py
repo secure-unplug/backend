@@ -43,7 +43,6 @@ class JoinRequest:
 
 @api_view(['POST'])
 def login(request):
-
     '''
     dto = LoginRequest(json.loads(request.body))
     user = User.objects.get(username=dto.username)
@@ -60,7 +59,8 @@ def login(request):
 
     dto = LoginRequest(json.loads(request.body))
     user = User.objects.filter(username=dto.username)
-    try : user.values()[0]['password']
+    try:
+        user.values()[0]['password']
     except IndexError:
         return Response({"message": "로그인에 실패했습니다."}, status=status.HTTP_401_UNAUTHORIZED)
     hashed_password = bytes(user.values()[0]['password'], 'utf-8')
@@ -173,13 +173,16 @@ def get_user_info(request):
 def update_userinfo(request):
     body = json.loads(request.body)
     print(body)
-    user = User.objects.get(username=request.user.username) #user db
-    new_name = body['name'] # put name
+    user = User.objects.get(username=request.user.username)  # user db
+    new_name = body['name']  # put name
     print(new_name)
-    name_validation = User.objects.filter(name=new_name)
-    if name_validation:
-        return Response({"message": "이름이 이미 존재합니다."})
-    user.name=new_name
+    if request.user.name == new_name:
+        pass
+    else:
+        name_validation = User.objects.filter(name=new_name)
+        if name_validation:
+            return Response({"message": "이름이 이미 존재합니다."})
+    user.name = new_name
 
     pwd = body['password']
     if len(pwd) < 10:
