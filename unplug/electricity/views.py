@@ -13,25 +13,40 @@ from .elec_calc import calc
 from user.decorator import authenticated
 from user.models import User
 from dateutil.relativedelta import relativedelta
-
+import re
 
 @api_view(['POST'])
 # @authenticated
 def save_entries(request):
+    valid_uuid = re.compile('[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}')
     body = json.loads(request.body.decode('utf-8'))
     info = Entries(serial=body['serial'], watt=body['watt'])
+    if valid_uuid.search(body['serial']) is None:
+        return Response({"Not in valid serial format"})
+    if type(body['watt']) != int:
+        return Response("watt is not integer type")
     info.save()
-
     return Response(status=status.HTTP_201_CREATED)
 
 
 @api_view(['GET'])
 @authenticated
 def view_entries(request):
+
     device_list = [value['serial'] for value in request.user.device.all().values()]
     print(device_list)
     start_date = request.GET['start_date']
     end_date = request.GET['end_date']
+    
+    # date 포맷 유효성 검사
+    try:
+        datetime.strptime(start_date, '%Y-%m-%d')
+    except ValueError:
+        return Response("Not in valid date format")
+    try:
+        datetime.strptime(end_date, '%Y-%m-%d')
+    except ValueError:
+        return Response("Not in valid date format")
     start_date = datetime.strptime(start_date, "%Y-%m-%d")
     end_date = datetime.strptime(end_date, "%Y-%m-%d")
     data = []
@@ -50,6 +65,22 @@ def view_period_average(request):
     start_date = request.GET['start_date']
     end_date = request.GET['end_date']
     serial = request.GET['serial']
+
+    # date 포맷 유효성 검사
+    try:
+        datetime.strptime(start_date, '%Y-%m-%d')
+    except ValueError:
+        return Response("Not in valid date format")
+    try:
+        datetime.strptime(end_date, '%Y-%m-%d')
+    except ValueError:
+        return Response("Not in valid date format")
+    # serial 포맷 유효성 검사
+    valid_uuid = re.compile('[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}')
+    if valid_uuid.search(serial) is None:
+        return Response({"Not in valid serial format"})
+    
+
     print(serial)
     start_date = datetime.strptime(start_date, "%Y-%m-%d")
     end_date = datetime.strptime(end_date, "%Y-%m-%d")
@@ -67,7 +98,12 @@ def view_period_average(request):
 @authenticated
 def view_device_fee(request):
     today = datetime.now()
+    print("여기")
     serial = request.GET['serial']
+    # serial 포맷 유효성 검사
+    valid_uuid = re.compile('[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}')
+    if valid_uuid.search(serial) is None:
+        return Response({"Not in valid serial format"})
     total_watt = 0
     month_first = datetime(today.year, today.month, 1).strftime("%Y-%m-%d")
     month_last = (datetime(today.year, today.month, 1) + relativedelta(months=1) - relativedelta(seconds=1)).strftime(
@@ -95,7 +131,12 @@ def view_average_kwatt(request):
 @api_view(['GET'])
 @authenticated
 def view_average_money(request):
+    # month 포맷 유효성 검사
     month = request.GET['month']
+    try:
+        datetime.strptime(month, '%m')
+    except ValueError:
+        return Response("Not in valid month format")
     data = Metadata.objects.filter(month=month)
     fee, tex_1, tex_2, total = calc((data.values()[0]['average_Kwatt']))
     money = dict(fee=fee, tex_1=tex_1, tex_2=tex_2, total=total)

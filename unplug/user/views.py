@@ -17,7 +17,11 @@ import uuid
 from django.core import serializers
 from electricity.models import Entries
 # load .env
+import re
+
 load_dotenv()
+
+import bcrypt
 
 
 # Create your views here.
@@ -38,9 +42,11 @@ class JoinRequest:
 @api_view(['POST'])
 def login(request):
     dto = LoginRequest(json.loads(request.body))
-    try:
-        user = User.objects.get(Q(username=dto.username) & Q(password=dto.password))
-    except:
+    user = User.objects.get(username=dto.username)
+    hashed_password = bytes(user.password, 'utf-8')
+    print(type(hashed_password))
+
+    if not bcrypt.checkpw(bytes(dto.password, 'utf-8'), hashed_password):
         return Response({"message": "로그인에 실패했습니다."}, status=status.HTTP_401_UNAUTHORIZED)
 
     token = token_encode(user)
@@ -63,9 +69,21 @@ def join(request):
     email_validation = User.objects.filter(email=dto.email)
     if email_validation:
         return Response({"message": "이메일이 이미 존재합니다."})
+    name_validation = User.objects.filter(name=dto.name)
+    if name_validation:
+        return Response({"message": "이름이 이미 존재합니다."})
+    pwd = dto.password
+    if len(pwd) < 10:
+        return Response({"message": "비밀번호는 최소 10자 이상이어야 함"})
+    elif re.search('[0-9]+', pwd) is None:
+        return Response({"message": "비밀번호는 최소 1개 이상의 숫자가 포함되어야 함"})
+    elif re.search('[a-zA-Z]+', pwd) is None:
+        return Response({"message": "비밀번호는 최소 1개 이상의 영문 대소문자가 포함되어야 함"})
+    elif re.search('[`~!@#$%^&*(),<.>/?]+', pwd) is None:
+        return Response({"message": "비밀번호는 최소 1개 이상의 특수문자가 포함되어야 함"})
+    pw_hash = bcrypt.hashpw(pwd.encode('utf-8'), bcrypt.gensalt())
 
-    user = User(username=dto.username, password=dto.password, email=dto.email, name=dto.name)
-
+    user = User(username=dto.username, password=pw_hash.decode('utf-8'), email=dto.email, name=dto.name)
     user.save()
 
     return Response({"message": "회원가입에 성공했습니다!"}, status=status.HTTP_201_CREATED)
@@ -107,8 +125,8 @@ def get_friends_list(request):
 @api_view(["GET"])
 @authenticated
 def get_friends_entries(request):
-    result=[]
-    result2=[]
+    result = []
+    result2 = []
     for i in [value['id'] for value in request.user.friends.all().values()]:
         devices = Device.objects.filter(user_id=User.objects.get(id=i)).values()
         if devices is not None:
@@ -120,13 +138,13 @@ def get_friends_entries(request):
     return Response(result2)
 
 
-
 @api_view(["POST"])
 @authenticated
 def add_friends(request):
     pass
 
+
 @api_view(["POST"])
 @authenticated
 def get_user_info(request):
-    return Response({"id": request.user.id, "email": request.user.email,"username": request.user.username,"name": request.user.name})
+    return Response({"name": request.user.name})
