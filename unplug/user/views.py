@@ -52,7 +52,6 @@ def login(request):
     hashed_password = bytes(user.values()[0]['password'], 'utf-8')
     if not bcrypt.checkpw(bytes(dto.password, 'utf-8'), hashed_password):
         return Response({"message": "로그인에 실패했습니다."}, status=status.HTTP_401_UNAUTHORIZED)
-    a = 3/0
     token = token_encode(user[0])
 
     return Response({"message": "로그인에 성공했습니다.", "token": token})
