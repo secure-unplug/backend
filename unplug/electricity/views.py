@@ -34,7 +34,6 @@ def save_entries(request):
 def view_entries(request):
 
     device_list = [value['serial'] for value in request.user.device.all().values()]
-    print(device_list)
     start_date = request.GET['start_date']
     end_date = request.GET['end_date']
     
@@ -56,12 +55,54 @@ def view_entries(request):
 
     return Response(data)
 
+'''
+@api_view(['GET'])
+@authenticated
+def export_exel(request):
+    device_list = [value['serial'] for value in request.user.device.all().values()]
+    #print(device_list)
+    data = []
+    for i in device_list:
+        data.append(Entries.objects.filter(serial=i).values())
+    #print(data)
+    #print(request.user.device.all().values())
+    
+    #print(data)
+    response = HttpResponse(content_type="application/vnd.ms-excel")
+    response["Content-Disposition"] = 'attachment;filename*=UTF-8\'\'example.xls' 
+    wb = xlwt.Workbook(encoding='utf-8') #encoding은 ansi로 해준다.
+    ws = wb.add_sheet('전력량') #시트 추가
 
+    title_style = xlwt.easyxf('pattern: pattern solid, fore_color indigo; align: horizontal center; font: color_index white;')
+    data_style = xlwt.easyxf('align: horizontal right')
+
+    row_num = 0
+    col_names = ['serial', 'watt', 'created_at']
+    rows = []
+    df = pd.DataFrame.from_records(data)
+    rows=df
+    print(df)
+    # for datum in df:
+    #     rows.append(int(datum['id']), datum['serial'], datum['watt'], datum['created_at'])
+    # 첫번째 열: 설정한 컬럼명 순서대로 스타일 적용하여 생성
+    row_num = 0
+    for idx, col_name in enumerate(col_names):
+        ws.write(row_num, idx, col_name)
+    
+    # 두번째 이후 열: 설정한 컬럼명에 맞춘 데이터 순서대로 스타일 적용하여 생성
+    for row in rows:
+        row_num +=1
+        for col_num, attr in enumerate(row):
+            ws.write(row_num, col_num, attr)
+    
+    wb.save(response)
+    print(rows)
+    return response
+'''
 @api_view(['GET'])
 @authenticated
 def view_period_average(request):
     device_list = [value['serial'] for value in request.user.device.all().values()]
-    print(device_list[0])
     start_date = request.GET['start_date']
     end_date = request.GET['end_date']
     serial = request.GET['serial']
@@ -81,7 +122,6 @@ def view_period_average(request):
         return Response({"Not in valid serial format"})
     
 
-    print(serial)
     start_date = datetime.strptime(start_date, "%Y-%m-%d")
     end_date = datetime.strptime(end_date, "%Y-%m-%d")
     dates = [(start_date + timedelta(days=i)).strftime("%Y-%m-%d") for i in range((end_date - start_date).days + 1)]
@@ -98,7 +138,6 @@ def view_period_average(request):
 @authenticated
 def view_device_fee(request):
     today = datetime.now()
-    print("여기")
     serial = request.GET['serial']
     # serial 포맷 유효성 검사
     valid_uuid = re.compile('[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}')
@@ -117,7 +156,6 @@ def view_device_fee(request):
         total_watt += data[j].watt
         j += 1
     fee = calc(total_watt / 1000)
-    print(total_watt / 1000)
     return Response(fee)
 
 
@@ -151,16 +189,15 @@ def view_device_data(request):
                      request.user.device.all().values()])
 
 
-'''
+
 @api_view(['GET'])
 @authenticated
-
 def view_my_entries(request):
     result = []
     for i in [value['serial'] for value in request.user.device.all().values()]:
         result.append(Entries.objects.filter(serial=i).values())
     return Response(result)
-'''
+
 
 
 @api_view(['GET'])
@@ -173,7 +210,6 @@ def get_kwatt_level(request):
     device_list = [value['serial'] for value in request.user.device.all().values()]
     earth_level = []
     total_watt = 0
-    print(kwatt)
     day_average = day_average * 1000 / 24
     # day_average는 kwh단위, w = kwh x 1000 / 시간
     j = 0
@@ -198,12 +234,9 @@ def get_kwatt_level(request):
             earth_level.append(1)
         elif total_watt <= day_average * 0.6:
             earth_level.append(1)
-        print(total_watt)
         total_watt = 0
 
     # total_kwatt = total_watt / 1000
-
-    print(day_average)
 
     '''
     if day_average * 1.4 < total_kwatt:

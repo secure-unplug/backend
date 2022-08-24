@@ -24,7 +24,7 @@ import re
 load_dotenv()
 
 import bcrypt
-
+import logging
 
 # Create your views here.
 class LoginRequest:
@@ -43,20 +43,6 @@ class JoinRequest:
 
 @api_view(['POST'])
 def login(request):
-    '''
-    dto = LoginRequest(json.loads(request.body))
-    user = User.objects.get(username=dto.username)
-    hashed_password = bytes(user.password, 'utf-8')
-    print(type(hashed_password))
-
-    if not bcrypt.checkpw(bytes(dto.password, 'utf-8'), hashed_password):
-        return Response({"message": "로그인에 실패했습니다."}, status=status.HTTP_401_UNAUTHORIZED)
-
-    token = token_encode(user)
-    print(user)
-    return Response({"message": "로그인에 성공했습니다.", "token": token})
-    '''
-
     dto = LoginRequest(json.loads(request.body))
     user = User.objects.filter(username=dto.username)
     try:
@@ -66,7 +52,7 @@ def login(request):
     hashed_password = bytes(user.values()[0]['password'], 'utf-8')
     if not bcrypt.checkpw(bytes(dto.password, 'utf-8'), hashed_password):
         return Response({"message": "로그인에 실패했습니다."}, status=status.HTTP_401_UNAUTHORIZED)
-
+    a = 3/0
     token = token_encode(user[0])
 
     return Response({"message": "로그인에 성공했습니다.", "token": token})
@@ -81,24 +67,24 @@ def join(request):
     # 이미 가입된 아이디인지 검증
     username_validation = User.objects.filter(username=dto.username)
     if username_validation:
-        return Response({"message": "아이디가 이미 존재합니다."})
+        return Response({"message": "아이디가 이미 존재합니다."},status=status.HTTP_401_UNAUTHORIZED)
 
     # 이미 가입된 이메일인지 검증
     email_validation = User.objects.filter(email=dto.email)
     if email_validation:
-        return Response({"message": "이메일이 이미 존재합니다."})
+        return Response({"message": "이메일이 이미 존재합니다."}, status=status.HTTP_401_UNAUTHORIZED)
     name_validation = User.objects.filter(name=dto.name)
     if name_validation:
-        return Response({"message": "이름이 이미 존재합니다."})
+        return Response({"message": "이름이 이미 존재합니다."}, status=status.HTTP_401_UNAUTHORIZED)
     pwd = dto.password
     if len(pwd) < 10:
-        return Response({"message": "비밀번호는 최소 10자 이상이어야 함"})
+        return Response({"message": "비밀번호는 최소 10자 이상이어야 함"}, status=status.HTTP_401_UNAUTHORIZED)
     elif re.search('[0-9]+', pwd) is None:
-        return Response({"message": "비밀번호는 최소 1개 이상의 숫자가 포함되어야 함"})
+        return Response({"message": "비밀번호는 최소 1개 이상의 숫자가 포함되어야 함"}, status=status.HTTP_401_UNAUTHORIZED)
     elif re.search('[a-zA-Z]+', pwd) is None:
-        return Response({"message": "비밀번호는 최소 1개 이상의 영문 대소문자가 포함되어야 함"})
+        return Response({"message": "비밀번호는 최소 1개 이상의 영문 대소문자가 포함되어야 함"}, status=status.HTTP_401_UNAUTHORIZED)
     elif re.search('[`~!@#$%^&*(),<.>/?]+', pwd) is None:
-        return Response({"message": "비밀번호는 최소 1개 이상의 특수문자가 포함되어야 함"})
+        return Response({"message": "비밀번호는 최소 1개 이상의 특수문자가 포함되어야 함"}, status=status.HTTP_401_UNAUTHORIZED)
     pw_hash = bcrypt.hashpw(pwd.encode('utf-8'), bcrypt.gensalt())
 
     user = User(username=dto.username, password=pw_hash.decode('utf-8'), email=dto.email, name=dto.name)
@@ -173,27 +159,25 @@ def get_user_info(request):
 @authenticated
 def update_userinfo(request):
     body = json.loads(request.body)
-    print(body)
     user = User.objects.get(username=request.user.username)  # user db
     new_name = body['name']  # put name
-    print(new_name)
     if request.user.name == new_name:
         pass
     else:
         name_validation = User.objects.filter(name=new_name)
         if name_validation:
-            return Response({"message": "이름이 이미 존재합니다."})
+            return Response({"message": "이름이 이미 존재합니다."}, status=status.HTTP_401_UNAUTHORIZED)
     user.name = new_name
 
     pwd = body['password']
     if len(pwd) < 10:
-        return Response({"message": "비밀번호는 최소 10자 이상이어야 함"})
+        return Response({"message": "비밀번호는 최소 10자 이상이어야 함"}, status=status.HTTP_401_UNAUTHORIZED)
     elif re.search('[0-9]+', pwd) is None:
-        return Response({"message": "비밀번호는 최소 1개 이상의 숫자가 포함되어야 함"})
+        return Response({"message": "비밀번호는 최소 1개 이상의 숫자가 포함되어야 함"}, status=status.HTTP_401_UNAUTHORIZED)
     elif re.search('[a-zA-Z]+', pwd) is None:
-        return Response({"message": "비밀번호는 최소 1개 이상의 영문 대소문자가 포함되어야 함"})
+        return Response({"message": "비밀번호는 최소 1개 이상의 영문 대소문자가 포함되어야 함"}, status=status.HTTP_401_UNAUTHORIZED)
     elif re.search('[`~!@#$%^&*(),<.>/?]+', pwd) is None:
-        return Response({"message": "비밀번호는 최소 1개 이상의 특수문자가 포함되어야 함"})
+        return Response({"message": "비밀번호는 최소 1개 이상의 특수문자가 포함되어야 함"}, status=status.HTTP_401_UNAUTHORIZED)
 
     pw_hash = bcrypt.hashpw(body['password'].encode('utf-8'), bcrypt.gensalt())
     user.password = pw_hash.decode('utf-8')
