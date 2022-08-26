@@ -893,3 +893,635 @@ KeyError: 'name'
 [2022-08-26 11:42:40] INFO Watching for file changes with StatReloader
 [2022-08-26 11:42:43] INFO "PUT /users/update_userinfo_username HTTP/1.1" 200 50
 [2022-08-26 11:42:53] INFO "POST /users/login HTTP/1.1" 200 210
+[2022-08-26 12:45:16] INFO Watching for file changes with StatReloader
+[2022-08-26 12:45:24] INFO "POST /users/login HTTP/1.1" 200 210
+[2022-08-26 12:46:20] INFO C:\git_origin\backend\unplug\user\views.py changed, reloading.
+[2022-08-26 12:46:21] INFO Watching for file changes with StatReloader
+[2022-08-26 12:46:51] ERROR Internal Server Error: /users/update_userinfo_password
+Traceback (most recent call last):
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\git_origin\backend\unplug\user\decorator.py", line 24, in wrap
+    return function(request, *args, **kwargs)
+  File "C:\git_origin\backend\unplug\user\views.py", line 228, in update_userinfo_password
+    body = json.loads(request.body)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting ',' delimiter: line 2 column 33 (char 35)
+[2022-08-26 12:46:51] ERROR "PUT /users/update_userinfo_password HTTP/1.1" 500 113572
+[2022-08-26 12:47:47] INFO C:\git_origin\backend\unplug\user\views.py changed, reloading.
+[2022-08-26 12:47:48] INFO Watching for file changes with StatReloader
+[2022-08-26 12:47:51] ERROR Internal Server Error: /users/update_userinfo_password
+Traceback (most recent call last):
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\git_origin\backend\unplug\user\decorator.py", line 24, in wrap
+    return function(request, *args, **kwargs)
+  File "C:\git_origin\backend\unplug\user\views.py", line 228, in update_userinfo_password
+    body = json.loads(request.body)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting ',' delimiter: line 2 column 33 (char 35)
+[2022-08-26 12:47:51] ERROR "PUT /users/update_userinfo_password HTTP/1.1" 500 113561
+[2022-08-26 12:48:28] INFO C:\git_origin\backend\unplug\user\views.py changed, reloading.
+[2022-08-26 12:48:29] INFO Watching for file changes with StatReloader
+[2022-08-26 12:48:30] ERROR Internal Server Error: /users/update_userinfo_password
+Traceback (most recent call last):
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\git_origin\backend\unplug\user\decorator.py", line 24, in wrap
+    return function(request, *args, **kwargs)
+  File "C:\git_origin\backend\unplug\user\views.py", line 228, in update_userinfo_password
+    body = json.loads(request.body)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting ',' delimiter: line 2 column 33 (char 35)
+[2022-08-26 12:48:30] ERROR "PUT /users/update_userinfo_password HTTP/1.1" 500 113605
+[2022-08-26 12:48:30] ERROR Internal Server Error: /users/update_userinfo_password
+Traceback (most recent call last):
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\git_origin\backend\unplug\user\decorator.py", line 24, in wrap
+    return function(request, *args, **kwargs)
+  File "C:\git_origin\backend\unplug\user\views.py", line 228, in update_userinfo_password
+    body = json.loads(request.body)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting ',' delimiter: line 2 column 33 (char 35)
+[2022-08-26 12:48:30] ERROR "PUT /users/update_userinfo_password HTTP/1.1" 500 113605
+[2022-08-26 12:48:43] INFO Watching for file changes with StatReloader
+[2022-08-26 12:49:00] ERROR Internal Server Error: /users/update_userinfo_password
+Traceback (most recent call last):
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\git_origin\backend\unplug\user\decorator.py", line 24, in wrap
+    return function(request, *args, **kwargs)
+  File "C:\git_origin\backend\unplug\user\views.py", line 228, in update_userinfo_password
+    body = json.loads(request.body)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting ',' delimiter: line 3 column 5 (char 43)
+[2022-08-26 12:49:00] ERROR "PUT /users/update_userinfo_password HTTP/1.1" 500 113404
+[2022-08-26 12:49:06] INFO "PUT /users/update_userinfo_password HTTP/1.1" 200 56
+[2022-08-26 12:49:15] INFO C:\git_origin\backend\unplug\user\views.py changed, reloading.
+[2022-08-26 12:49:16] INFO Watching for file changes with StatReloader
+[2022-08-26 12:49:18] INFO "PUT /users/update_userinfo_password HTTP/1.1" 200 69
+[2022-08-26 12:49:38] INFO "PUT /users/update_userinfo_password HTTP/1.1" 200 69
+[2022-08-26 12:50:04] INFO C:\git_origin\backend\unplug\user\views.py changed, reloading.
+[2022-08-26 12:50:04] INFO Watching for file changes with StatReloader
+[2022-08-26 12:50:07] INFO C:\git_origin\backend\unplug\user\views.py changed, reloading.
+[2022-08-26 12:50:08] INFO Watching for file changes with StatReloader
+[2022-08-26 12:50:27] INFO "PUT /users/update_userinfo_password HTTP/1.1" 200 69
+[2022-08-26 12:50:59] INFO "POST /users/login HTTP/1.1" 200 210
+[2022-08-26 12:51:29] INFO "PUT /users/update_userinfo_password HTTP/1.1" 200 69
+[2022-08-26 12:53:08] INFO C:\git_origin\backend\unplug\user\views.py changed, reloading.
+[2022-08-26 12:53:09] INFO Watching for file changes with StatReloader
+[2022-08-26 12:53:16] ERROR Internal Server Error: /users/update_userinfo_password
+Traceback (most recent call last):
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\git_origin\backend\unplug\user\decorator.py", line 24, in wrap
+    return function(request, *args, **kwargs)
+  File "C:\git_origin\backend\unplug\user\views.py", line 234, in update_userinfo_password
+    if before_pw_hash.decode('utf-8') != request.user.password :
+AttributeError: 'str' object has no attribute 'decode'
+[2022-08-26 12:53:16] ERROR "PUT /users/update_userinfo_password HTTP/1.1" 500 101669
+[2022-08-26 12:54:30] INFO C:\git_origin\backend\unplug\user\views.py changed, reloading.
+[2022-08-26 12:54:31] INFO Watching for file changes with StatReloader
+[2022-08-26 12:54:34] INFO "PUT /users/update_userinfo_password HTTP/1.1" 200 69
+[2022-08-26 12:55:03] INFO C:\git_origin\backend\unplug\user\views.py changed, reloading.
+[2022-08-26 12:55:04] INFO Watching for file changes with StatReloader
+[2022-08-26 12:55:05] ERROR Internal Server Error: /users/update_userinfo_password
+Traceback (most recent call last):
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\git_origin\backend\unplug\user\decorator.py", line 24, in wrap
+    return function(request, *args, **kwargs)
+  File "C:\git_origin\backend\unplug\user\views.py", line 234, in update_userinfo_password
+    if before_pw_hash.decode('utf-8') != request.user.password :
+AttributeError: 'str' object has no attribute 'decode'
+[2022-08-26 12:55:05] ERROR "PUT /users/update_userinfo_password HTTP/1.1" 500 101644
+[2022-08-26 12:55:06] ERROR Internal Server Error: /users/update_userinfo_password
+Traceback (most recent call last):
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\git_origin\backend\unplug\user\decorator.py", line 24, in wrap
+    return function(request, *args, **kwargs)
+  File "C:\git_origin\backend\unplug\user\views.py", line 234, in update_userinfo_password
+    if before_pw_hash.decode('utf-8') != request.user.password :
+AttributeError: 'str' object has no attribute 'decode'
+[2022-08-26 12:55:06] ERROR "PUT /users/update_userinfo_password HTTP/1.1" 500 101644
+[2022-08-26 12:55:23] INFO C:\git_origin\backend\unplug\user\views.py changed, reloading.
+[2022-08-26 12:55:24] INFO Watching for file changes with StatReloader
+[2022-08-26 12:55:28] INFO C:\git_origin\backend\unplug\user\views.py changed, reloading.
+[2022-08-26 12:55:29] INFO Watching for file changes with StatReloader
+[2022-08-26 12:55:31] INFO "PUT /users/update_userinfo_password HTTP/1.1" 200 69
+[2022-08-26 12:55:50] WARNING Unauthorized: /users/join
+[2022-08-26 12:55:50] WARNING "POST /users/join HTTP/1.1" 401 50
+[2022-08-26 12:56:09] ERROR Internal Server Error: /users/join
+Traceback (most recent call last):
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\git_origin\backend\unplug\user\views.py", line 159, in join
+    email.send()
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\mail\message.py", line 298, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\mail\backends\smtp.py", line 131, in send_messages
+    sent = self._send(message)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\mail\backends\smtp.py", line 149, in _send
+    self.connection.sendmail(
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 871, in sendmail
+    raise SMTPSenderRefused(code, resp, from_addr)
+smtplib.SMTPSenderRefused: (530, b'5.7.0 Authentication Required. Learn more at\n5.7.0  https://support.google.com/mail/?p=WantAuthError jj22-20020a170903049600b00172dc6e1916sm348431plb.220 - gsmtp', 'yyyymimi7246@gmail.com')
+[2022-08-26 12:56:09] ERROR "POST /users/join HTTP/1.1" 500 117517
+[2022-08-26 12:56:26] INFO C:\git_origin\backend\unplug\unplug\settings.py changed, reloading.
+[2022-08-26 12:56:27] INFO Watching for file changes with StatReloader
+[2022-08-26 12:56:29] WARNING Unauthorized: /users/join
+[2022-08-26 12:56:29] WARNING "POST /users/join HTTP/1.1" 401 50
+[2022-08-26 12:56:35] WARNING Unauthorized: /users/join
+[2022-08-26 12:56:35] WARNING "POST /users/join HTTP/1.1" 401 50
+[2022-08-26 12:56:41] INFO "GET /admin/ HTTP/1.1" 200 7284
+[2022-08-26 12:56:41] INFO "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[2022-08-26 12:56:41] INFO "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+[2022-08-26 12:56:41] INFO "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+[2022-08-26 12:56:41] INFO "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[2022-08-26 12:56:41] INFO "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[2022-08-26 12:56:41] INFO "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+[2022-08-26 12:56:41] INFO "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+[2022-08-26 12:56:41] INFO "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+[2022-08-26 12:56:41] INFO "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+[2022-08-26 12:56:41] INFO "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+[2022-08-26 12:56:41] INFO "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+[2022-08-26 12:56:41] INFO "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+[2022-08-26 12:56:42] INFO "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+[2022-08-26 12:56:43] INFO "GET /admin/user/user/ HTTP/1.1" 200 8492
+[2022-08-26 12:56:43] INFO "GET /static/admin/css/changelists.css HTTP/1.1" 200 6395
+[2022-08-26 12:56:43] INFO "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+[2022-08-26 12:56:43] INFO "GET /static/admin/js/core.js HTTP/1.1" 200 5698
+[2022-08-26 12:56:43] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 12:56:43] INFO "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 8919
+[2022-08-26 12:56:43] INFO "GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+[2022-08-26 12:56:43] INFO "GET /static/admin/js/urlify.js HTTP/1.1" 200 7902
+[2022-08-26 12:56:43] INFO "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+[2022-08-26 12:56:43] INFO "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+[2022-08-26 12:56:43] INFO "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 288580
+[2022-08-26 12:56:43] INFO "GET /static/admin/js/filters.js HTTP/1.1" 200 966
+[2022-08-26 12:56:43] INFO "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[2022-08-26 12:56:46] INFO "GET /admin/user/user/10/change/ HTTP/1.1" 200 11222
+[2022-08-26 12:56:46] INFO "GET /static/admin/css/forms.css HTTP/1.1" 200 8944
+[2022-08-26 12:56:46] INFO "GET /static/admin/css/widgets.css HTTP/1.1" 200 11297
+[2022-08-26 12:56:46] INFO "GET /static/admin/js/calendar.js HTTP/1.1" 200 8466
+[2022-08-26 12:56:46] INFO "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19379
+[2022-08-26 12:56:46] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 12:56:46] INFO "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+[2022-08-26 12:56:46] INFO "GET /static/admin/js/change_form.js HTTP/1.1" 200 1043
+[2022-08-26 12:56:46] INFO "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+[2022-08-26 12:56:46] INFO "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+[2022-08-26 12:56:47] INFO "GET /admin/user/user/ HTTP/1.1" 200 8492
+[2022-08-26 12:56:51] INFO "POST /admin/user/user/ HTTP/1.1" 200 6703
+[2022-08-26 12:56:51] INFO "GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+[2022-08-26 12:56:52] INFO "POST /admin/user/user/ HTTP/1.1" 302 0
+[2022-08-26 12:56:52] INFO "GET /admin/user/user/ HTTP/1.1" 200 8199
+[2022-08-26 12:56:52] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 12:56:52] INFO "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[2022-08-26 12:56:59] INFO "POST /users/join HTTP/1.1" 201 49
+[2022-08-26 12:57:11] WARNING Unauthorized: /users/update_userinfo_password
+[2022-08-26 12:57:11] WARNING "PUT /users/update_userinfo_password HTTP/1.1" 401 63
+[2022-08-26 12:57:21] INFO "POST /users/login HTTP/1.1" 200 213
+[2022-08-26 12:57:31] INFO "PUT /users/update_userinfo_password HTTP/1.1" 200 69
+[2022-08-26 12:58:33] INFO "GET /admin/user/user/3/change/ HTTP/1.1" 200 11163
+[2022-08-26 12:58:33] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 12:58:33] INFO "GET /admin/user/user/ HTTP/1.1" 200 8278
+[2022-08-26 12:58:34] INFO "GET /admin/user/user/12/change/ HTTP/1.1" 200 11177
+[2022-08-26 12:58:34] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 12:59:13] INFO C:\git_origin\backend\unplug\user\views.py changed, reloading.
+[2022-08-26 12:59:14] INFO Watching for file changes with StatReloader
+[2022-08-26 12:59:17] INFO "PUT /users/update_userinfo_password HTTP/1.1" 200 69
+[2022-08-26 13:42:19] WARNING Not Found: /
+[2022-08-26 13:42:19] WARNING "GET / HTTP/1.1" 404 2279
+[2022-08-26 13:55:30] INFO "GET /admin/electricity/metadata/ HTTP/1.1" 200 6550
+[2022-08-26 13:55:30] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 13:55:31] INFO "GET /admin/electricity/entries/ HTTP/1.1" 200 26511
+[2022-08-26 13:55:31] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 13:55:32] INFO "GET /admin/electricity/metadata/ HTTP/1.1" 200 6550
+[2022-08-26 13:55:32] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 13:55:33] INFO "GET /admin/electricity/metadata/add/ HTTP/1.1" 200 7670
+[2022-08-26 13:55:33] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 13:59:51] INFO C:\git_origin\backend\unplug\electricity\views.py changed, reloading.
+[2022-08-26 13:59:52] INFO Watching for file changes with StatReloader
+[2022-08-26 14:00:03] INFO C:\git_origin\backend\unplug\electricity\views.py changed, reloading.
+[2022-08-26 14:00:04] INFO Watching for file changes with StatReloader
+[2022-08-26 14:01:31] INFO C:\git_origin\backend\unplug\electricity\views.py changed, reloading.
+[2022-08-26 14:01:32] INFO Watching for file changes with StatReloader
+[2022-08-26 14:01:45] INFO C:\git_origin\backend\unplug\electricity\views.py changed, reloading.
+[2022-08-26 14:01:45] INFO Watching for file changes with StatReloader
+[2022-08-26 14:01:56] INFO "POST /users/login HTTP/1.1" 200 213
+[2022-08-26 14:02:09] WARNING Not Found: /
+[2022-08-26 14:02:09] WARNING "POST / HTTP/1.1" 404 2280
+[2022-08-26 14:02:14] WARNING Not Found: /electricities/
+[2022-08-26 14:02:14] WARNING "POST /electricities/ HTTP/1.1" 404 3765
+[2022-08-26 14:02:18] WARNING Method Not Allowed: /electricities/kwatt_level
+[2022-08-26 14:02:18] WARNING "POST /electricities/kwatt_level HTTP/1.1" 405 41
+[2022-08-26 14:02:21] ERROR Internal Server Error: /electricities/kwatt_level
+Traceback (most recent call last):
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\git_origin\backend\unplug\user\decorator.py", line 24, in wrap
+    return function(request, *args, **kwargs)
+  File "C:\git_origin\backend\unplug\electricity\views.py", line 211, in get_kwatt_level
+    kwatt = Metadata.objects.filter(month=month).values()[0]['average_Kwatt']
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 446, in __getitem__
+    return qs._result_cache[0]
+IndexError: list index out of range
+[2022-08-26 14:02:21] ERROR "GET /electricities/kwatt_level HTTP/1.1" 500 104706
+[2022-08-26 14:02:32] INFO "GET /admin/electricity/metadata/ HTTP/1.1" 200 6550
+[2022-08-26 14:02:32] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:02:33] INFO "GET /admin/electricity/entries/ HTTP/1.1" 200 26511
+[2022-08-26 14:02:33] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:02:35] INFO "GET /admin/electricity/entries/70/change/ HTTP/1.1" 200 8881
+[2022-08-26 14:02:35] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:02:37] INFO "GET /admin/electricity/entries/ HTTP/1.1" 200 26511
+[2022-08-26 14:02:37] INFO "GET /admin/user/device/ HTTP/1.1" 200 6508
+[2022-08-26 14:02:37] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:02:38] INFO "GET /admin/electricity/entries/ HTTP/1.1" 200 26511
+[2022-08-26 14:02:38] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:02:39] INFO "GET /admin/user/device/ HTTP/1.1" 200 6508
+[2022-08-26 14:02:39] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:02:40] INFO "GET /admin/electricity/entries/ HTTP/1.1" 200 26511
+[2022-08-26 14:02:40] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:02:40] INFO "GET /admin/electricity/entries/70/change/ HTTP/1.1" 200 8881
+[2022-08-26 14:02:40] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:02:42] INFO "GET /admin/user/device/ HTTP/1.1" 200 6508
+[2022-08-26 14:02:42] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:02:43] INFO "GET /admin/user/device/add/ HTTP/1.1" 200 9223
+[2022-08-26 14:02:43] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:02:43] INFO "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+[2022-08-26 14:02:44] INFO "GET /admin/user/user/ HTTP/1.1" 200 8278
+[2022-08-26 14:02:44] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:02:44] INFO "GET /admin/user/user/12/change/ HTTP/1.1" 200 11177
+[2022-08-26 14:02:44] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:02:45] INFO "GET /admin/user/user/ HTTP/1.1" 200 8278
+[2022-08-26 14:02:45] INFO "GET /admin/user/device/ HTTP/1.1" 200 6508
+[2022-08-26 14:02:45] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:02:46] INFO "GET /admin/user/device/add/ HTTP/1.1" 200 9223
+[2022-08-26 14:02:46] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:02:51] INFO "POST /admin/user/device/add/ HTTP/1.1" 302 0
+[2022-08-26 14:02:51] INFO "GET /admin/user/device/ HTTP/1.1" 200 8045
+[2022-08-26 14:02:51] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:02:52] INFO "GET /admin/electricity/metadata/ HTTP/1.1" 200 6550
+[2022-08-26 14:02:52] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:02:53] INFO "GET /admin/electricity/metadata/add/ HTTP/1.1" 200 7670
+[2022-08-26 14:02:53] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:03:12] INFO "POST /admin/electricity/metadata/add/ HTTP/1.1" 302 0
+[2022-08-26 14:03:12] INFO "GET /admin/electricity/metadata/ HTTP/1.1" 200 7930
+[2022-08-26 14:03:12] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:03:12] INFO "GET /admin/electricity/metadata/add/ HTTP/1.1" 200 7670
+[2022-08-26 14:03:12] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:03:14] INFO "POST /admin/electricity/metadata/add/ HTTP/1.1" 302 0
+[2022-08-26 14:03:14] INFO "GET /admin/electricity/metadata/ HTTP/1.1" 200 8152
+[2022-08-26 14:03:14] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:03:15] INFO "GET /admin/electricity/metadata/add/ HTTP/1.1" 200 7670
+[2022-08-26 14:03:15] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:03:17] INFO "POST /admin/electricity/metadata/add/ HTTP/1.1" 302 0
+[2022-08-26 14:03:17] INFO "GET /admin/electricity/metadata/ HTTP/1.1" 200 8373
+[2022-08-26 14:03:17] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:03:18] INFO "GET /admin/electricity/metadata/add/ HTTP/1.1" 200 7670
+[2022-08-26 14:03:18] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:03:20] INFO "POST /admin/electricity/metadata/add/ HTTP/1.1" 302 0
+[2022-08-26 14:03:20] INFO "GET /admin/electricity/metadata/ HTTP/1.1" 200 8594
+[2022-08-26 14:03:20] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:03:20] INFO "GET /admin/electricity/metadata/add/ HTTP/1.1" 200 7670
+[2022-08-26 14:03:20] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:03:24] INFO "POST /admin/electricity/metadata/add/ HTTP/1.1" 200 7823
+[2022-08-26 14:03:24] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:03:26] INFO "POST /admin/electricity/metadata/add/ HTTP/1.1" 302 0
+[2022-08-26 14:03:26] INFO "GET /admin/electricity/metadata/ HTTP/1.1" 200 8815
+[2022-08-26 14:03:26] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:03:27] INFO "GET /admin/electricity/metadata/add/ HTTP/1.1" 200 7670
+[2022-08-26 14:03:27] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:03:30] INFO "POST /admin/electricity/metadata/add/ HTTP/1.1" 302 0
+[2022-08-26 14:03:30] INFO "GET /admin/electricity/metadata/ HTTP/1.1" 200 9036
+[2022-08-26 14:03:30] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:03:30] INFO "GET /admin/electricity/metadata/add/ HTTP/1.1" 200 7670
+[2022-08-26 14:03:30] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:03:35] INFO "POST /admin/electricity/metadata/add/ HTTP/1.1" 302 0
+[2022-08-26 14:03:35] INFO "GET /admin/electricity/metadata/ HTTP/1.1" 200 9257
+[2022-08-26 14:03:35] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:03:35] INFO "GET /admin/electricity/metadata/add/ HTTP/1.1" 200 7670
+[2022-08-26 14:03:35] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:03:41] INFO "POST /admin/electricity/metadata/add/ HTTP/1.1" 302 0
+[2022-08-26 14:03:41] INFO "GET /admin/electricity/metadata/ HTTP/1.1" 200 9478
+[2022-08-26 14:03:41] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:03:42] INFO "GET /admin/electricity/metadata/add/ HTTP/1.1" 200 7670
+[2022-08-26 14:03:42] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:03:46] INFO "POST /admin/electricity/metadata/add/ HTTP/1.1" 302 0
+[2022-08-26 14:03:46] INFO "GET /admin/electricity/metadata/ HTTP/1.1" 200 9699
+[2022-08-26 14:03:46] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:03:47] INFO "GET /admin/electricity/metadata/add/ HTTP/1.1" 200 7670
+[2022-08-26 14:03:47] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:03:51] INFO "POST /admin/electricity/metadata/add/ HTTP/1.1" 302 0
+[2022-08-26 14:03:51] INFO "GET /admin/electricity/metadata/ HTTP/1.1" 200 9928
+[2022-08-26 14:03:51] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:03:51] INFO "GET /admin/electricity/metadata/add/ HTTP/1.1" 200 7670
+[2022-08-26 14:03:51] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:03:55] INFO "POST /admin/electricity/metadata/add/ HTTP/1.1" 302 0
+[2022-08-26 14:03:55] INFO "GET /admin/electricity/metadata/ HTTP/1.1" 200 10152
+[2022-08-26 14:03:55] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:03:55] INFO "GET /admin/electricity/metadata/add/ HTTP/1.1" 200 7670
+[2022-08-26 14:03:55] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:03:58] INFO "POST /admin/electricity/metadata/add/ HTTP/1.1" 302 0
+[2022-08-26 14:03:58] INFO "GET /admin/electricity/metadata/ HTTP/1.1" 200 10376
+[2022-08-26 14:03:58] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:04:03] INFO "GET /electricities/kwatt_level HTTP/1.1" 200 3
+[2022-08-26 14:04:40] INFO C:\git_origin\backend\unplug\electricity\views.py changed, reloading.
+[2022-08-26 14:04:41] INFO Watching for file changes with StatReloader
+[2022-08-26 14:04:44] INFO "GET /electricities/kwatt_level HTTP/1.1" 200 3
+[2022-08-26 14:05:10] INFO "GET /admin/electricity/entries/ HTTP/1.1" 200 26511
+[2022-08-26 14:05:11] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:05:12] INFO "GET /admin/electricity/entries/60/change/ HTTP/1.1" 200 8881
+[2022-08-26 14:05:12] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:05:14] INFO "GET /admin/user/device/ HTTP/1.1" 200 7768
+[2022-08-26 14:05:14] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:05:15] INFO "GET /admin/user/device/550e8400-e29b-41d4-a716-446655440000/change/ HTTP/1.1" 200 9720
+[2022-08-26 14:05:15] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:05:17] INFO "POST /admin/user/device/550e8400-e29b-41d4-a716-446655440000/change/ HTTP/1.1" 302 0
+[2022-08-26 14:05:17] INFO "GET /admin/user/device/ HTTP/1.1" 200 8047
+[2022-08-26 14:05:17] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:05:22] INFO "GET /electricities/kwatt_level HTTP/1.1" 200 3
+[2022-08-26 14:05:27] INFO "GET /admin/user/user/ HTTP/1.1" 200 8278
+[2022-08-26 14:05:27] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:05:28] INFO "GET /admin/user/user/12/change/ HTTP/1.1" 200 11177
+[2022-08-26 14:05:28] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:05:31] INFO "GET /admin/electricity/entries/ HTTP/1.1" 200 26511
+[2022-08-26 14:05:31] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:05:32] INFO "GET /admin/electricity/entries/70/change/ HTTP/1.1" 200 8881
+[2022-08-26 14:05:32] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:05:52] INFO "GET /admin/electricity/entries/ HTTP/1.1" 200 26511
+[2022-08-26 14:05:52] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:06:11] INFO "GET /admin/electricity/entries/add/ HTTP/1.1" 200 8403
+[2022-08-26 14:06:11] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:06:15] INFO "POST /admin/electricity/entries/add/ HTTP/1.1" 302 0
+[2022-08-26 14:06:15] INFO "GET /admin/electricity/entries/ HTTP/1.1" 200 27033
+[2022-08-26 14:06:15] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:06:19] INFO "GET /electricities/kwatt_level HTTP/1.1" 200 3
+[2022-08-26 14:08:28] INFO C:\git_origin\backend\unplug\electricity\views.py changed, reloading.
+[2022-08-26 14:08:29] INFO Watching for file changes with StatReloader
+[2022-08-26 14:08:35] INFO "GET /electricities/kwatt_level HTTP/1.1" 200 3
+[2022-08-26 14:11:04] INFO C:\git_origin\backend\unplug\electricity\views.py changed, reloading.
+[2022-08-26 14:11:05] INFO Watching for file changes with StatReloader
+[2022-08-26 14:11:15] INFO C:\git_origin\backend\unplug\electricity\views.py changed, reloading.
+[2022-08-26 14:11:16] INFO Watching for file changes with StatReloader
+[2022-08-26 14:11:23] INFO "GET /electricities/kwatt_level HTTP/1.1" 200 3
+[2022-08-26 14:18:05] INFO C:\git_origin\backend\unplug\electricity\views.py changed, reloading.
+[2022-08-26 14:18:06] INFO Watching for file changes with StatReloader
+[2022-08-26 14:18:12] INFO C:\git_origin\backend\unplug\electricity\views.py changed, reloading.
+[2022-08-26 14:18:13] INFO Watching for file changes with StatReloader
+[2022-08-26 14:18:16] INFO "GET /electricities/kwatt_level HTTP/1.1" 200 3
+[2022-08-26 14:18:41] INFO "GET /admin/user/device/ HTTP/1.1" 200 7768
+[2022-08-26 14:18:41] INFO "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[2022-08-26 14:18:41] INFO "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+[2022-08-26 14:18:41] INFO "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+[2022-08-26 14:18:41] INFO "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+[2022-08-26 14:18:41] INFO "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+[2022-08-26 14:18:41] INFO "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+[2022-08-26 14:18:41] INFO "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+[2022-08-26 14:18:41] INFO "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+[2022-08-26 14:18:41] INFO "GET /static/admin/js/core.js HTTP/1.1" 304 0
+[2022-08-26 14:18:41] INFO "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+[2022-08-26 14:18:41] INFO "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+[2022-08-26 14:18:41] INFO "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+[2022-08-26 14:18:41] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:18:41] INFO "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+[2022-08-26 14:18:41] INFO "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+[2022-08-26 14:18:41] INFO "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+[2022-08-26 14:18:41] INFO "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+[2022-08-26 14:18:41] INFO "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+[2022-08-26 14:18:41] INFO "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+[2022-08-26 14:18:42] INFO "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+[2022-08-26 14:18:42] INFO "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+[2022-08-26 14:18:42] INFO "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+[2022-08-26 14:18:43] INFO "GET /admin/user/device/550e8400-e29b-41d4-a716-446655440000/change/ HTTP/1.1" 200 9720
+[2022-08-26 14:18:43] INFO "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+[2022-08-26 14:18:43] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:18:43] INFO "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+[2022-08-26 14:18:43] INFO "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+[2022-08-26 14:18:43] INFO "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+[2022-08-26 14:18:43] INFO "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+[2022-08-26 14:18:44] INFO "GET /admin/electricity/metadata/ HTTP/1.1" 200 10159
+[2022-08-26 14:18:44] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:18:44] INFO "GET /admin/electricity/entries/ HTTP/1.1" 200 26776
+[2022-08-26 14:18:44] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:18:48] INFO "GET /admin/electricity/entries/70/change/ HTTP/1.1" 200 8881
+[2022-08-26 14:18:48] INFO "GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+[2022-08-26 14:18:48] INFO "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+[2022-08-26 14:18:48] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:18:48] INFO "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 304 0
+[2022-08-26 14:18:48] INFO "GET /static/admin/img/icon-clock.svg HTTP/1.1" 304 0
+[2022-08-26 14:18:49] INFO "GET /admin/electricity/entries/ HTTP/1.1" 200 26776
+[2022-08-26 14:18:49] INFO "GET /admin/electricity/entries/66/change/ HTTP/1.1" 200 8881
+[2022-08-26 14:18:49] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:18:50] INFO "GET /admin/electricity/entries/ HTTP/1.1" 200 26776
+[2022-08-26 14:18:58] INFO "GET /admin/electricity/entries/71/change/ HTTP/1.1" 200 8861
+[2022-08-26 14:18:58] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:19:00] INFO "POST /admin/electricity/entries/71/change/ HTTP/1.1" 302 0
+[2022-08-26 14:19:00] INFO "GET /admin/electricity/entries/ HTTP/1.1" 200 27035
+[2022-08-26 14:19:00] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:19:00] INFO "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+[2022-08-26 14:19:08] INFO "GET /electricities/kwatt_level HTTP/1.1" 200 3
+[2022-08-26 14:19:08] INFO "GET /electricities/kwatt_level HTTP/1.1" 200 3
+[2022-08-26 14:19:15] INFO "GET /admin/electricity/entries/71/change/ HTTP/1.1" 200 8862
+[2022-08-26 14:19:15] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:19:49] INFO "POST /admin/electricity/entries/71/change/ HTTP/1.1" 302 0
+[2022-08-26 14:19:49] INFO "GET /admin/electricity/entries/ HTTP/1.1" 200 27035
+[2022-08-26 14:19:49] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:19:52] INFO "GET /electricities/kwatt_level HTTP/1.1" 200 3
+[2022-08-26 14:20:33] INFO C:\git_origin\backend\unplug\electricity\views.py changed, reloading.
+[2022-08-26 14:20:34] INFO Watching for file changes with StatReloader
+[2022-08-26 14:23:02] INFO "GET /admin/electricity/entries/71/change/ HTTP/1.1" 200 8862
+[2022-08-26 14:23:02] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:23:04] INFO "POST /admin/electricity/entries/71/change/ HTTP/1.1" 302 0
+[2022-08-26 14:23:04] INFO "GET /admin/electricity/entries/ HTTP/1.1" 200 27035
+[2022-08-26 14:23:04] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 14:23:08] INFO "GET /electricities/kwatt_level HTTP/1.1" 200 3
+[2022-08-26 14:24:10] INFO C:\git_origin\backend\unplug\user\views.py changed, reloading.
+[2022-08-26 14:24:11] INFO Watching for file changes with StatReloader

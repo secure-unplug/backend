@@ -213,8 +213,9 @@ def get_kwatt_level(request):
     device_list = [value['serial'] for value in request.user.device.all().values()]
     earth_level = []
     total_watt = 0
-    day_average = day_average * 1000 / 24
-    # day_average는 kwh단위, w = kwh x 1000 / 시간
+    day_average = (day_average * 1000)
+    # day_average는 kwh단위, w * 3600 = kwh
+    print(day_average)
     j = 0
     for i in device_list:
         data = Entries.objects.filter(serial=device_list[j], created_at__range=(
@@ -222,8 +223,8 @@ def get_kwatt_level(request):
             '-created_at',
             '-id')
         for t in data:
-            total_watt += t.watt * 3
-            # 아두이노에서 3분마다 watt 평균을 보내기 때문에 3을 곱해줌
+            total_watt += t.watt/20
+        print(total_watt)
         j += 1
         if day_average * 1.4 < total_watt:
             earth_level.append(5)
@@ -237,8 +238,8 @@ def get_kwatt_level(request):
             earth_level.append(1)
         elif total_watt <= day_average * 0.6:
             earth_level.append(1)
+        print(total_watt)
         total_watt = 0
-
     # total_kwatt = total_watt / 1000
 
     '''

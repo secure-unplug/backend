@@ -151,7 +151,7 @@ def join(request):
     #send_email(request)
     email = EmailMessage(
         '가입을 축하드립니다! 지구를 지켜봐요 ^.^',
-        '조그마한 관심이 큰 결과를 만들어요~',  # 내용
+        dto.name+'님의 조그마한 관심이 큰 결과를 만들어요~',  # 내용
         'yyyymimi7246@gmail.com',  # 보내는 이메일 (settings에서 설정해서 작성안해도 됨)
         to=[dto.email],  # 받는 이메일 리스트
     )
@@ -226,7 +226,7 @@ def get_user_info(request):
 @authenticated
 def update_userinfo_password(request):
     body = json.loads(request.body)
-    user = User.objects.get(username=request.user.username)
+
 
     pwd = body['password']
     if len(pwd) < 10:
