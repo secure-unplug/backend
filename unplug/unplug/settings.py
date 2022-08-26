@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'bvyx7lmqxjcxpi)8imsya+pe8hr*)q2v5kn1#giwm@owdx^3+h'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 LOGGING = {
     'version': 1,
@@ -90,7 +90,24 @@ INSTALLED_APPS = [
     'electricity',
     'corsheaders',
     'user'
+
 ]
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'yyyymimi7246@gmail.com' # ex) bum752@gmail.com
+EMAIL_HOST_PASSWORD = 'gppvhqzcpsyzfhke' # ex) P@ssw0rd
+SERVER_EMAIL = 'yyyymimi7246@gmail.com' # ex) bum752@gmail.com
+DEFAULT_FROM_MAIL = EMAIL_HOST_USER # ex) bum752
+
+
+
+
+
+
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
@@ -102,6 +119,15 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+
+
+
+
+
+
+
+
 
 ROOT_URLCONF = 'unplug.urls'
 

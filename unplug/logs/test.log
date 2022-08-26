@@ -104,3 +104,659 @@ Traceback (most recent call last):
                     ~~~~^^^^^^^^^^^^
 KeyError: 'username'
 [2022-08-25 06:56:48] ERROR "POST /users/login HTTP/1.1" 500 145
+[2022-08-26 00:50:53] INFO Watching for file changes with StatReloader
+[2022-08-26 00:51:29] INFO Watching for file changes with StatReloader
+[2022-08-26 00:51:50] INFO Watching for file changes with StatReloader
+[2022-08-26 00:52:03] WARNING Not Found: /
+[2022-08-26 00:52:03] WARNING "GET / HTTP/1.1" 404 179
+[2022-08-26 00:52:03] WARNING Not Found: /favicon.ico
+[2022-08-26 00:52:03] WARNING "GET /favicon.ico HTTP/1.1" 404 179
+[2022-08-26 00:52:07] INFO "GET /admin HTTP/1.1" 301 0
+[2022-08-26 00:52:07] INFO "GET /admin/ HTTP/1.1" 302 0
+[2022-08-26 00:52:07] INFO "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2222
+[2022-08-26 00:52:07] WARNING Not Found: /static/admin/css/base.css
+[2022-08-26 00:52:07] WARNING Not Found: /static/admin/css/dark_mode.css
+[2022-08-26 00:52:07] WARNING Not Found: /static/admin/css/nav_sidebar.css
+[2022-08-26 00:52:07] WARNING Not Found: /static/admin/css/login.css
+[2022-08-26 00:52:07] WARNING "GET /static/admin/css/base.css HTTP/1.1" 404 179
+[2022-08-26 00:52:07] WARNING Not Found: /static/admin/css/responsive.css
+[2022-08-26 00:52:07] WARNING "GET /static/admin/css/dark_mode.css HTTP/1.1" 404 179
+[2022-08-26 00:52:07] WARNING Not Found: /static/admin/js/nav_sidebar.js
+[2022-08-26 00:52:07] WARNING "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+[2022-08-26 00:52:07] WARNING "GET /static/admin/css/login.css HTTP/1.1" 404 179
+[2022-08-26 00:52:07] INFO - Broken pipe from ('127.0.0.1', 3899)
+[2022-08-26 00:52:07] WARNING "GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+[2022-08-26 00:52:07] WARNING "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+[2022-08-26 00:52:14] INFO "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2385
+[2022-08-26 00:52:14] WARNING Not Found: /static/admin/css/base.css
+[2022-08-26 00:52:14] WARNING Not Found: /static/admin/css/nav_sidebar.css
+[2022-08-26 00:52:14] WARNING Not Found: /static/admin/css/responsive.css
+[2022-08-26 00:52:14] WARNING Not Found: /static/admin/css/dark_mode.css
+[2022-08-26 00:52:14] WARNING Not Found: /static/admin/css/login.css
+[2022-08-26 00:52:14] WARNING "GET /static/admin/css/base.css HTTP/1.1" 404 179
+[2022-08-26 00:52:14] WARNING Not Found: /static/admin/js/nav_sidebar.js
+[2022-08-26 00:52:14] WARNING "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+[2022-08-26 00:52:14] WARNING "GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+[2022-08-26 00:52:14] WARNING "GET /static/admin/css/dark_mode.css HTTP/1.1" 404 179
+[2022-08-26 00:52:14] WARNING "GET /static/admin/css/login.css HTTP/1.1" 404 179
+[2022-08-26 00:52:14] WARNING "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+[2022-08-26 00:52:48] INFO Watching for file changes with StatReloader
+[2022-08-26 00:52:50] INFO "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2222
+[2022-08-26 00:52:50] WARNING Not Found: /static/admin/css/base.css
+[2022-08-26 00:52:50] WARNING Not Found: /static/admin/css/nav_sidebar.css
+[2022-08-26 00:52:50] WARNING Not Found: /static/admin/css/dark_mode.css
+[2022-08-26 00:52:50] WARNING Not Found: /static/admin/css/login.css
+[2022-08-26 00:52:50] WARNING "GET /static/admin/css/base.css HTTP/1.1" 404 179
+[2022-08-26 00:52:50] WARNING "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+[2022-08-26 00:52:50] WARNING "GET /static/admin/css/dark_mode.css HTTP/1.1" 404 179
+[2022-08-26 00:52:50] WARNING Not Found: /static/admin/css/responsive.css
+[2022-08-26 00:52:50] WARNING "GET /static/admin/css/login.css HTTP/1.1" 404 179
+[2022-08-26 00:52:50] WARNING Not Found: /static/admin/js/nav_sidebar.js
+[2022-08-26 00:52:50] WARNING "GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+[2022-08-26 00:52:50] WARNING "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+[2022-08-26 00:52:53] INFO "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[2022-08-26 00:52:53] INFO "GET /admin/ HTTP/1.1" 200 5757
+[2022-08-26 00:52:53] WARNING Not Found: /static/admin/css/base.css
+[2022-08-26 00:52:53] WARNING Not Found: /static/admin/css/dashboard.css
+[2022-08-26 00:52:53] WARNING Not Found: /static/admin/css/dark_mode.css
+[2022-08-26 00:52:53] WARNING Not Found: /static/admin/css/nav_sidebar.css
+[2022-08-26 00:52:53] WARNING Not Found: /static/admin/js/nav_sidebar.js
+[2022-08-26 00:52:53] WARNING Not Found: /static/admin/css/responsive.css
+[2022-08-26 00:52:53] WARNING "GET /static/admin/css/base.css HTTP/1.1" 404 179
+[2022-08-26 00:52:53] WARNING "GET /static/admin/css/dashboard.css HTTP/1.1" 404 179
+[2022-08-26 00:52:53] WARNING "GET /static/admin/css/dark_mode.css HTTP/1.1" 404 179
+[2022-08-26 00:52:53] WARNING "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+[2022-08-26 00:52:53] WARNING "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+[2022-08-26 00:52:53] WARNING "GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+[2022-08-26 00:52:59] INFO "GET /admin/auth/group/ HTTP/1.1" 200 6858
+[2022-08-26 00:52:59] WARNING Not Found: /static/admin/css/base.css
+[2022-08-26 00:52:59] WARNING Not Found: /static/admin/css/dark_mode.css
+[2022-08-26 00:52:59] WARNING Not Found: /static/admin/css/changelists.css
+[2022-08-26 00:52:59] WARNING Not Found: /static/admin/css/nav_sidebar.css
+[2022-08-26 00:52:59] WARNING Not Found: /static/admin/js/vendor/jquery/jquery.min.js
+[2022-08-26 00:52:59] WARNING "GET /static/admin/css/base.css HTTP/1.1" 404 179
+[2022-08-26 00:52:59] WARNING "GET /static/admin/css/dark_mode.css HTTP/1.1" 404 179
+[2022-08-26 00:52:59] WARNING "GET /static/admin/css/changelists.css HTTP/1.1" 404 179
+[2022-08-26 00:52:59] WARNING "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+[2022-08-26 00:52:59] WARNING Not Found: /static/admin/css/responsive.css
+[2022-08-26 00:52:59] WARNING "GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 404 179
+[2022-08-26 00:52:59] WARNING Not Found: /static/admin/js/jquery.init.js
+[2022-08-26 00:52:59] WARNING Not Found: /static/admin/js/core.js
+[2022-08-26 00:52:59] WARNING Not Found: /static/admin/js/admin/RelatedObjectLookups.js
+[2022-08-26 00:52:59] WARNING "GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+[2022-08-26 00:52:59] WARNING Not Found: /static/admin/js/actions.js
+[2022-08-26 00:52:59] WARNING "GET /static/admin/js/jquery.init.js HTTP/1.1" 404 179
+[2022-08-26 00:52:59] WARNING "GET /static/admin/js/core.js HTTP/1.1" 404 179
+[2022-08-26 00:52:59] WARNING "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 404 179
+[2022-08-26 00:52:59] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 00:52:59] WARNING Not Found: /static/admin/js/urlify.js
+[2022-08-26 00:52:59] WARNING Not Found: /static/admin/js/prepopulate.js
+[2022-08-26 00:52:59] WARNING Not Found: /static/admin/js/vendor/xregexp/xregexp.min.js
+[2022-08-26 00:52:59] WARNING "GET /static/admin/js/actions.js HTTP/1.1" 404 179
+[2022-08-26 00:53:00] WARNING "GET /static/admin/js/urlify.js HTTP/1.1" 404 179
+[2022-08-26 00:53:00] WARNING "GET /static/admin/js/prepopulate.js HTTP/1.1" 404 179
+[2022-08-26 00:53:00] WARNING "GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 404 179
+[2022-08-26 00:53:00] WARNING Not Found: /static/admin/img/search.svg
+[2022-08-26 00:53:00] WARNING Not Found: /static/admin/css/responsive.css
+[2022-08-26 00:53:00] WARNING Not Found: /static/admin/js/filters.js
+[2022-08-26 00:53:00] WARNING Not Found: /static/admin/js/nav_sidebar.js
+[2022-08-26 00:53:00] WARNING "GET /static/admin/img/search.svg HTTP/1.1" 404 179
+[2022-08-26 00:53:00] WARNING "GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+[2022-08-26 00:53:00] WARNING "GET /static/admin/js/filters.js HTTP/1.1" 404 179
+[2022-08-26 00:53:00] WARNING "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+[2022-08-26 00:53:01] INFO "GET /admin/ HTTP/1.1" 200 5757
+[2022-08-26 00:53:02] INFO "GET /admin/auth/user/ HTTP/1.1" 200 10116
+[2022-08-26 00:53:02] WARNING Not Found: /static/admin/css/base.css
+[2022-08-26 00:53:02] WARNING Not Found: /static/admin/css/dark_mode.css
+[2022-08-26 00:53:02] WARNING Not Found: /static/admin/css/changelists.css
+[2022-08-26 00:53:02] WARNING Not Found: /static/admin/css/nav_sidebar.css
+[2022-08-26 00:53:02] WARNING Not Found: /static/admin/js/vendor/jquery/jquery.min.js
+[2022-08-26 00:53:02] WARNING "GET /static/admin/css/base.css HTTP/1.1" 404 179
+[2022-08-26 00:53:02] WARNING "GET /static/admin/css/dark_mode.css HTTP/1.1" 404 179
+[2022-08-26 00:53:02] WARNING Not Found: /static/admin/css/responsive.css
+[2022-08-26 00:53:02] WARNING "GET /static/admin/css/changelists.css HTTP/1.1" 404 179
+[2022-08-26 00:53:02] WARNING "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+[2022-08-26 00:53:02] WARNING "GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 404 179
+[2022-08-26 00:53:02] WARNING Not Found: /static/admin/js/jquery.init.js
+[2022-08-26 00:53:02] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 00:53:02] WARNING "GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+[2022-08-26 00:53:02] WARNING Not Found: /static/admin/js/core.js
+[2022-08-26 00:53:02] WARNING Not Found: /static/admin/js/admin/RelatedObjectLookups.js
+[2022-08-26 00:53:02] WARNING Not Found: /static/admin/js/actions.js
+[2022-08-26 00:53:02] WARNING "GET /static/admin/js/jquery.init.js HTTP/1.1" 404 179
+[2022-08-26 00:53:02] WARNING Not Found: /static/admin/js/urlify.js
+[2022-08-26 00:53:02] WARNING Not Found: /static/admin/js/prepopulate.js
+[2022-08-26 00:53:02] WARNING "GET /static/admin/js/core.js HTTP/1.1" 404 179
+[2022-08-26 00:53:02] WARNING "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 404 179
+[2022-08-26 00:53:02] WARNING "GET /static/admin/js/actions.js HTTP/1.1" 404 179
+[2022-08-26 00:53:02] WARNING Not Found: /static/admin/js/vendor/xregexp/xregexp.min.js
+[2022-08-26 00:53:02] WARNING "GET /static/admin/js/urlify.js HTTP/1.1" 404 179
+[2022-08-26 00:53:02] WARNING "GET /static/admin/js/prepopulate.js HTTP/1.1" 404 179
+[2022-08-26 00:53:02] WARNING "GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 404 179
+[2022-08-26 00:53:02] WARNING Not Found: /static/admin/js/nav_sidebar.js
+[2022-08-26 00:53:02] WARNING Not Found: /static/admin/css/responsive.css
+[2022-08-26 00:53:02] WARNING Not Found: /static/admin/img/search.svg
+[2022-08-26 00:53:02] WARNING Not Found: /static/admin/img/icon-yes.svg
+[2022-08-26 00:53:02] WARNING Not Found: /static/admin/js/filters.js
+[2022-08-26 00:53:02] WARNING "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+[2022-08-26 00:53:02] WARNING "GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+[2022-08-26 00:53:02] WARNING "GET /static/admin/img/search.svg HTTP/1.1" 404 179
+[2022-08-26 00:53:02] WARNING "GET /static/admin/img/icon-yes.svg HTTP/1.1" 404 179
+[2022-08-26 00:53:02] WARNING "GET /static/admin/js/filters.js HTTP/1.1" 404 179
+[2022-08-26 00:53:03] INFO "GET /admin/ HTTP/1.1" 200 5757
+[2022-08-26 00:53:03] WARNING Not Found: /static/admin/css/base.css
+[2022-08-26 00:53:03] WARNING "GET /static/admin/css/base.css HTTP/1.1" 404 179
+[2022-08-26 00:53:04] INFO "GET /admin/electricity/entries/ HTTP/1.1" 200 26519
+[2022-08-26 00:53:04] WARNING Not Found: /static/admin/css/base.css
+[2022-08-26 00:53:04] WARNING "GET /static/admin/css/base.css HTTP/1.1" 404 179
+[2022-08-26 00:53:04] WARNING Not Found: /static/admin/css/dark_mode.css
+[2022-08-26 00:53:04] WARNING Not Found: /static/admin/css/nav_sidebar.css
+[2022-08-26 00:53:04] WARNING Not Found: /static/admin/css/changelists.css
+[2022-08-26 00:53:04] WARNING Not Found: /static/admin/js/vendor/jquery/jquery.min.js
+[2022-08-26 00:53:04] WARNING Not Found: /static/admin/js/jquery.init.js
+[2022-08-26 00:53:04] WARNING "GET /static/admin/css/dark_mode.css HTTP/1.1" 404 179
+[2022-08-26 00:53:04] WARNING "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+[2022-08-26 00:53:04] WARNING "GET /static/admin/css/changelists.css HTTP/1.1" 404 179
+[2022-08-26 00:53:04] WARNING "GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 404 179
+[2022-08-26 00:53:04] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 00:53:04] WARNING "GET /static/admin/js/jquery.init.js HTTP/1.1" 404 179
+[2022-08-26 00:53:04] WARNING Not Found: /static/admin/css/responsive.css
+[2022-08-26 00:53:04] WARNING Not Found: /static/admin/js/core.js
+[2022-08-26 00:53:04] WARNING Not Found: /static/admin/js/admin/RelatedObjectLookups.js
+[2022-08-26 00:53:04] WARNING Not Found: /static/admin/js/actions.js
+[2022-08-26 00:53:04] WARNING Not Found: /static/admin/js/urlify.js
+[2022-08-26 00:53:04] WARNING Not Found: /static/admin/js/prepopulate.js
+[2022-08-26 00:53:04] WARNING "GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+[2022-08-26 00:53:04] WARNING "GET /static/admin/js/core.js HTTP/1.1" 404 179
+[2022-08-26 00:53:04] WARNING "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 404 179
+[2022-08-26 00:53:04] WARNING "GET /static/admin/js/actions.js HTTP/1.1" 404 179
+[2022-08-26 00:53:04] WARNING "GET /static/admin/js/urlify.js HTTP/1.1" 404 179
+[2022-08-26 00:53:04] WARNING "GET /static/admin/js/prepopulate.js HTTP/1.1" 404 179
+[2022-08-26 00:53:04] WARNING Not Found: /static/admin/js/vendor/xregexp/xregexp.min.js
+[2022-08-26 00:53:04] WARNING Not Found: /static/admin/js/nav_sidebar.js
+[2022-08-26 00:53:04] WARNING "GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 404 179
+[2022-08-26 00:53:04] WARNING "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+[2022-08-26 00:53:04] WARNING Not Found: /static/admin/js/filters.js
+[2022-08-26 00:53:04] WARNING Not Found: /static/admin/css/responsive.css
+[2022-08-26 00:53:04] WARNING "GET /static/admin/js/filters.js HTTP/1.1" 404 179
+[2022-08-26 00:53:04] WARNING "GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+[2022-08-26 00:53:05] INFO "GET /admin/ HTTP/1.1" 200 5757
+[2022-08-26 00:53:06] INFO "GET /admin/electricity/metadata/ HTTP/1.1" 200 6558
+[2022-08-26 00:53:07] WARNING Not Found: /static/admin/css/base.css
+[2022-08-26 00:53:07] WARNING Not Found: /static/admin/css/dark_mode.css
+[2022-08-26 00:53:07] WARNING Not Found: /static/admin/css/nav_sidebar.css
+[2022-08-26 00:53:07] WARNING Not Found: /static/admin/js/vendor/jquery/jquery.min.js
+[2022-08-26 00:53:07] WARNING Not Found: /static/admin/css/changelists.css
+[2022-08-26 00:53:07] WARNING "GET /static/admin/css/base.css HTTP/1.1" 404 179
+[2022-08-26 00:53:07] WARNING "GET /static/admin/css/dark_mode.css HTTP/1.1" 404 179
+[2022-08-26 00:53:07] WARNING "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+[2022-08-26 00:53:07] WARNING "GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 404 179
+[2022-08-26 00:53:07] WARNING Not Found: /static/admin/css/responsive.css
+[2022-08-26 00:53:07] WARNING Not Found: /static/admin/js/jquery.init.js
+[2022-08-26 00:53:07] WARNING "GET /static/admin/css/changelists.css HTTP/1.1" 404 179
+[2022-08-26 00:53:07] WARNING Not Found: /static/admin/js/core.js
+[2022-08-26 00:53:07] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 00:53:07] WARNING Not Found: /static/admin/js/admin/RelatedObjectLookups.js
+[2022-08-26 00:53:07] WARNING "GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+[2022-08-26 00:53:07] WARNING "GET /static/admin/js/jquery.init.js HTTP/1.1" 404 179
+[2022-08-26 00:53:07] WARNING Not Found: /static/admin/js/actions.js
+[2022-08-26 00:53:07] WARNING "GET /static/admin/js/core.js HTTP/1.1" 404 179
+[2022-08-26 00:53:07] WARNING Not Found: /static/admin/js/urlify.js
+[2022-08-26 00:53:07] WARNING Not Found: /static/admin/js/prepopulate.js
+[2022-08-26 00:53:07] WARNING "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 404 179
+[2022-08-26 00:53:07] WARNING Not Found: /static/admin/js/vendor/xregexp/xregexp.min.js
+[2022-08-26 00:53:07] WARNING "GET /static/admin/js/actions.js HTTP/1.1" 404 179
+[2022-08-26 00:53:07] WARNING "GET /static/admin/js/urlify.js HTTP/1.1" 404 179
+[2022-08-26 00:53:07] WARNING "GET /static/admin/js/prepopulate.js HTTP/1.1" 404 179
+[2022-08-26 00:53:07] WARNING "GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 404 179
+[2022-08-26 00:53:07] WARNING Not Found: /static/admin/css/responsive.css
+[2022-08-26 00:53:07] WARNING Not Found: /static/admin/js/filters.js
+[2022-08-26 00:53:07] WARNING Not Found: /static/admin/js/nav_sidebar.js
+[2022-08-26 00:53:07] WARNING "GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+[2022-08-26 00:53:07] WARNING "GET /static/admin/js/filters.js HTTP/1.1" 404 179
+[2022-08-26 00:53:07] WARNING "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+[2022-08-26 00:53:07] INFO "GET /admin/ HTTP/1.1" 200 5757
+[2022-08-26 00:53:08] INFO "GET /admin/user/device/ HTTP/1.1" 200 6516
+[2022-08-26 00:53:08] WARNING Not Found: /static/admin/css/base.css
+[2022-08-26 00:53:08] WARNING Not Found: /static/admin/css/dark_mode.css
+[2022-08-26 00:53:08] WARNING Not Found: /static/admin/css/changelists.css
+[2022-08-26 00:53:08] WARNING Not Found: /static/admin/css/nav_sidebar.css
+[2022-08-26 00:53:08] WARNING Not Found: /static/admin/js/vendor/jquery/jquery.min.js
+[2022-08-26 00:53:08] WARNING "GET /static/admin/css/base.css HTTP/1.1" 404 179
+[2022-08-26 00:53:08] WARNING "GET /static/admin/css/dark_mode.css HTTP/1.1" 404 179
+[2022-08-26 00:53:08] WARNING "GET /static/admin/css/changelists.css HTTP/1.1" 404 179
+[2022-08-26 00:53:08] WARNING "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+[2022-08-26 00:53:08] WARNING "GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 404 179
+[2022-08-26 00:53:08] WARNING Not Found: /static/admin/css/responsive.css
+[2022-08-26 00:53:08] WARNING Not Found: /static/admin/js/jquery.init.js
+[2022-08-26 00:53:08] WARNING Not Found: /static/admin/js/core.js
+[2022-08-26 00:53:08] WARNING Not Found: /static/admin/js/admin/RelatedObjectLookups.js
+[2022-08-26 00:53:08] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 00:53:08] WARNING Not Found: /static/admin/js/actions.js
+[2022-08-26 00:53:08] WARNING "GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+[2022-08-26 00:53:08] WARNING "GET /static/admin/js/jquery.init.js HTTP/1.1" 404 179
+[2022-08-26 00:53:08] WARNING "GET /static/admin/js/core.js HTTP/1.1" 404 179
+[2022-08-26 00:53:08] WARNING "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 404 179
+[2022-08-26 00:53:08] WARNING Not Found: /static/admin/js/urlify.js
+[2022-08-26 00:53:08] WARNING "GET /static/admin/js/actions.js HTTP/1.1" 404 179
+[2022-08-26 00:53:08] WARNING Not Found: /static/admin/js/prepopulate.js
+[2022-08-26 00:53:08] WARNING Not Found: /static/admin/js/vendor/xregexp/xregexp.min.js
+[2022-08-26 00:53:08] WARNING "GET /static/admin/js/urlify.js HTTP/1.1" 404 179
+[2022-08-26 00:53:08] WARNING "GET /static/admin/js/prepopulate.js HTTP/1.1" 404 179
+[2022-08-26 00:53:08] WARNING "GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 404 179
+[2022-08-26 00:53:08] WARNING Not Found: /static/admin/js/nav_sidebar.js
+[2022-08-26 00:53:08] WARNING Not Found: /static/admin/js/filters.js
+[2022-08-26 00:53:08] WARNING Not Found: /static/admin/css/responsive.css
+[2022-08-26 00:53:08] WARNING "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+[2022-08-26 00:53:08] WARNING "GET /static/admin/js/filters.js HTTP/1.1" 404 179
+[2022-08-26 00:53:08] WARNING "GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+[2022-08-26 00:53:09] INFO "GET /admin/ HTTP/1.1" 200 5757
+[2022-08-26 00:53:09] INFO "GET /admin/user/user/ HTTP/1.1" 200 6502
+[2022-08-26 00:53:09] WARNING Not Found: /static/admin/css/base.css
+[2022-08-26 00:53:09] WARNING "GET /static/admin/css/base.css HTTP/1.1" 404 179
+[2022-08-26 00:53:09] WARNING Not Found: /static/admin/css/dark_mode.css
+[2022-08-26 00:53:09] WARNING Not Found: /static/admin/css/nav_sidebar.css
+[2022-08-26 00:53:09] WARNING Not Found: /static/admin/js/vendor/jquery/jquery.min.js
+[2022-08-26 00:53:09] WARNING Not Found: /static/admin/css/changelists.css
+[2022-08-26 00:53:09] WARNING Not Found: /static/admin/css/responsive.css
+[2022-08-26 00:53:09] WARNING "GET /static/admin/css/dark_mode.css HTTP/1.1" 404 179
+[2022-08-26 00:53:09] WARNING "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 404 179
+[2022-08-26 00:53:09] WARNING "GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 404 179
+[2022-08-26 00:53:09] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 00:53:09] WARNING "GET /static/admin/css/changelists.css HTTP/1.1" 404 179
+[2022-08-26 00:53:09] WARNING "GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+[2022-08-26 00:53:09] WARNING Not Found: /static/admin/js/jquery.init.js
+[2022-08-26 00:53:09] WARNING Not Found: /static/admin/js/core.js
+[2022-08-26 00:53:09] WARNING Not Found: /static/admin/js/admin/RelatedObjectLookups.js
+[2022-08-26 00:53:09] WARNING Not Found: /static/admin/js/actions.js
+[2022-08-26 00:53:09] WARNING Not Found: /static/admin/js/urlify.js
+[2022-08-26 00:53:09] WARNING Not Found: /static/admin/js/prepopulate.js
+[2022-08-26 00:53:09] WARNING "GET /static/admin/js/jquery.init.js HTTP/1.1" 404 179
+[2022-08-26 00:53:09] WARNING "GET /static/admin/js/core.js HTTP/1.1" 404 179
+[2022-08-26 00:53:09] WARNING "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 404 179
+[2022-08-26 00:53:09] WARNING "GET /static/admin/js/actions.js HTTP/1.1" 404 179
+[2022-08-26 00:53:09] WARNING "GET /static/admin/js/urlify.js HTTP/1.1" 404 179
+[2022-08-26 00:53:09] WARNING "GET /static/admin/js/prepopulate.js HTTP/1.1" 404 179
+[2022-08-26 00:53:09] WARNING Not Found: /static/admin/js/vendor/xregexp/xregexp.min.js
+[2022-08-26 00:53:09] WARNING Not Found: /static/admin/js/nav_sidebar.js
+[2022-08-26 00:53:09] WARNING "GET /static/admin/js/vendor/xregexp/xregexp.min.js HTTP/1.1" 404 179
+[2022-08-26 00:53:09] WARNING "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 404 179
+[2022-08-26 00:53:09] WARNING Not Found: /static/admin/js/filters.js
+[2022-08-26 00:53:09] WARNING Not Found: /static/admin/css/responsive.css
+[2022-08-26 00:53:10] WARNING "GET /static/admin/js/filters.js HTTP/1.1" 404 179
+[2022-08-26 00:53:10] WARNING "GET /static/admin/css/responsive.css HTTP/1.1" 404 179
+[2022-08-26 00:53:10] INFO "GET /admin/ HTTP/1.1" 200 5757
+[2022-08-26 09:49:57] INFO Watching for file changes with StatReloader
+[2022-08-26 09:50:00] INFO "GET /admin/ HTTP/1.1" 200 5757
+[2022-08-26 09:50:02] INFO "GET /static/admin/css/dashboard.css HTTP/1.1" 200 380
+[2022-08-26 09:50:02] INFO "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 796
+[2022-08-26 09:50:02] INFO "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2619
+[2022-08-26 09:50:02] INFO "GET /static/admin/css/base.css HTTP/1.1" 200 20344
+[2022-08-26 09:50:02] INFO "GET /static/admin/css/responsive.css HTTP/1.1" 200 18854
+[2022-08-26 09:50:02] INFO "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3763
+[2022-08-26 09:50:02] INFO "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[2022-08-26 09:50:02] INFO "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[2022-08-26 09:50:02] INFO "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[2022-08-26 09:50:02] INFO "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+[2022-08-26 09:50:02] INFO "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+[2022-08-26 09:50:02] INFO "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+[2022-08-26 09:50:03] WARNING Not Found: /favicon.ico
+[2022-08-26 09:50:03] WARNING "GET /favicon.ico HTTP/1.1" 404 2330
+[2022-08-26 09:51:28] INFO C:\git\backend\unplug\unplug\settings.py changed, reloading.
+[2022-08-26 09:51:28] INFO Watching for file changes with StatReloader
+[2022-08-26 10:19:15] INFO Watching for file changes with StatReloader
+[2022-08-26 10:21:03] INFO Watching for file changes with StatReloader
+[2022-08-26 10:21:20] INFO "GET /admin HTTP/1.1" 301 0
+[2022-08-26 10:21:20] INFO "GET /admin/ HTTP/1.1" 302 0
+[2022-08-26 10:21:20] INFO "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2222
+[2022-08-26 10:21:23] INFO "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3763
+[2022-08-26 10:21:23] INFO "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2619
+[2022-08-26 10:21:23] INFO "GET /static/admin/css/responsive.css HTTP/1.1" 200 18854
+[2022-08-26 10:21:23] INFO "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 796
+[2022-08-26 10:21:23] INFO "GET /static/admin/css/login.css HTTP/1.1" 200 958
+[2022-08-26 10:21:23] INFO "GET /static/admin/css/base.css HTTP/1.1" 200 20344
+[2022-08-26 10:21:23] INFO "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[2022-08-26 10:21:23] INFO "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+[2022-08-26 10:21:23] INFO "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+[2022-08-26 10:21:23] WARNING Not Found: /favicon.ico
+[2022-08-26 10:21:23] WARNING "GET /favicon.ico HTTP/1.1" 404 2330
+[2022-08-26 10:21:26] INFO "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[2022-08-26 10:21:26] INFO "GET /admin/ HTTP/1.1" 200 5757
+[2022-08-26 10:21:26] INFO "GET /static/admin/css/dashboard.css HTTP/1.1" 200 380
+[2022-08-26 10:21:26] INFO "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[2022-08-26 10:21:26] INFO "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[2022-08-26 10:21:26] INFO "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+[2022-08-26 10:24:47] WARNING Not Found: /join
+[2022-08-26 10:24:47] WARNING "GET /join HTTP/1.1" 404 2309
+[2022-08-26 10:24:52] WARNING Not Found: /
+[2022-08-26 10:24:52] WARNING "GET / HTTP/1.1" 404 2279
+[2022-08-26 10:25:52] WARNING Method Not Allowed: /users/join
+[2022-08-26 10:25:52] WARNING "GET /users/join HTTP/1.1" 405 40
+[2022-08-26 10:25:57] ERROR Internal Server Error: /users/join
+Traceback (most recent call last):
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\git\backend\unplug\user\views.py", line 111, in join
+    send_email(dto.email)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 492, in dispatch
+    request = self.initialize_request(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 391, in initialize_request
+    return Request(
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\request.py", line 154, in __init__
+    assert isinstance(request, HttpRequest), (
+AssertionError: The `request` argument must be an instance of `django.http.HttpRequest`, not `builtins.str`.
+[2022-08-26 10:25:57] ERROR "POST /users/join HTTP/1.1" 500 119819
+[2022-08-26 10:26:25] INFO C:\git\backend\unplug\user\views.py changed, reloading.
+[2022-08-26 10:26:26] INFO Watching for file changes with StatReloader
+[2022-08-26 10:26:27] WARNING Unauthorized: /users/join
+[2022-08-26 10:26:27] WARNING "POST /users/join HTTP/1.1" 401 50
+[2022-08-26 10:26:29] WARNING Unauthorized: /users/join
+[2022-08-26 10:26:29] WARNING "POST /users/join HTTP/1.1" 401 50
+[2022-08-26 10:26:48] INFO C:\git\backend\unplug\user\views.py changed, reloading.
+[2022-08-26 10:26:48] INFO Watching for file changes with StatReloader
+[2022-08-26 10:27:02] WARNING Unauthorized: /users/join
+[2022-08-26 10:27:02] WARNING "POST /users/join HTTP/1.1" 401 50
+[2022-08-26 10:27:19] ERROR Internal Server Error: /users/join
+Traceback (most recent call last):
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\git\backend\unplug\user\views.py", line 112, in join
+    send_email(dto.email)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 492, in dispatch
+    request = self.initialize_request(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 391, in initialize_request
+    return Request(
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\request.py", line 154, in __init__
+    assert isinstance(request, HttpRequest), (
+AssertionError: The `request` argument must be an instance of `django.http.HttpRequest`, not `builtins.str`.
+[2022-08-26 10:27:19] ERROR "POST /users/join HTTP/1.1" 500 119668
+[2022-08-26 10:27:56] INFO C:\git\backend\unplug\user\views.py changed, reloading.
+[2022-08-26 10:27:57] INFO Watching for file changes with StatReloader
+[2022-08-26 10:28:00] WARNING Unauthorized: /users/join
+[2022-08-26 10:28:00] WARNING "POST /users/join HTTP/1.1" 401 50
+[2022-08-26 10:28:15] ERROR Internal Server Error: /users/join
+Traceback (most recent call last):
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\git\backend\unplug\user\views.py", line 111, in join
+    send_email(dto.email)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 492, in dispatch
+    request = self.initialize_request(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 391, in initialize_request
+    return Request(
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\request.py", line 154, in __init__
+    assert isinstance(request, HttpRequest), (
+AssertionError: The `request` argument must be an instance of `django.http.HttpRequest`, not `builtins.str`.
+[2022-08-26 10:28:15] ERROR "POST /users/join HTTP/1.1" 500 119674
+[2022-08-26 10:29:25] INFO C:\git\backend\unplug\user\views.py changed, reloading.
+[2022-08-26 10:29:25] INFO Watching for file changes with StatReloader
+[2022-08-26 10:29:41] ERROR Internal Server Error: /users/join
+Traceback (most recent call last):
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\git\backend\unplug\user\views.py", line 111, in join
+    send_email(request, dto.email)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 492, in dispatch
+    request = self.initialize_request(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 391, in initialize_request
+    return Request(
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\request.py", line 154, in __init__
+    assert isinstance(request, HttpRequest), (
+AssertionError: The `request` argument must be an instance of `django.http.HttpRequest`, not `rest_framework.request.Request`.
+[2022-08-26 10:29:41] ERROR "POST /users/join HTTP/1.1" 500 120177
+[2022-08-26 10:29:59] INFO C:\git\backend\unplug\user\views.py changed, reloading.
+[2022-08-26 10:30:00] INFO Watching for file changes with StatReloader
+[2022-08-26 10:30:20] ERROR Internal Server Error: /users/join
+Traceback (most recent call last):
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\git\backend\unplug\user\views.py", line 111, in join
+    send_email(request)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 492, in dispatch
+    request = self.initialize_request(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 391, in initialize_request
+    return Request(
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\request.py", line 154, in __init__
+    assert isinstance(request, HttpRequest), (
+AssertionError: The `request` argument must be an instance of `django.http.HttpRequest`, not `rest_framework.request.Request`.
+[2022-08-26 10:30:20] ERROR "POST /users/join HTTP/1.1" 500 119970
+[2022-08-26 10:30:38] INFO C:\git\backend\unplug\user\views.py changed, reloading.
+[2022-08-26 10:30:38] INFO Watching for file changes with StatReloader
+[2022-08-26 10:30:48] ERROR Internal Server Error: /users/join
+Traceback (most recent call last):
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\git\backend\unplug\user\views.py", line 111, in join
+    send_email()
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+TypeError: view() missing 1 required positional argument: 'request'
+[2022-08-26 10:30:48] ERROR "POST /users/join HTTP/1.1" 500 100963
+[2022-08-26 10:30:59] INFO C:\git\backend\unplug\user\views.py changed, reloading.
+[2022-08-26 10:30:59] INFO Watching for file changes with StatReloader
+[2022-08-26 10:31:04] ERROR Internal Server Error: /users/join
+Traceback (most recent call last):
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\git\backend\unplug\user\views.py", line 111, in join
+    send_email(request)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 492, in dispatch
+    request = self.initialize_request(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 391, in initialize_request
+    return Request(
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\request.py", line 154, in __init__
+    assert isinstance(request, HttpRequest), (
+AssertionError: The `request` argument must be an instance of `django.http.HttpRequest`, not `rest_framework.request.Request`.
+[2022-08-26 10:31:04] ERROR "POST /users/join HTTP/1.1" 500 119972
+[2022-08-26 10:31:40] INFO C:\git\backend\unplug\user\views.py changed, reloading.
+[2022-08-26 10:31:40] INFO Watching for file changes with StatReloader
+[2022-08-26 10:31:47] INFO "POST /users/join HTTP/1.1" 201 49
+[2022-08-26 10:32:13] INFO C:\git\backend\unplug\user\views.py changed, reloading.
+[2022-08-26 10:32:13] INFO Watching for file changes with StatReloader
+[2022-08-26 10:33:18] INFO C:\git\backend\unplug\user\views.py changed, reloading.
+[2022-08-26 10:33:18] INFO Watching for file changes with StatReloader
+[2022-08-26 10:34:53] INFO "GET /admin/user/user/ HTTP/1.1" 200 9119
+[2022-08-26 10:34:53] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 10:34:55] INFO "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+[2022-08-26 10:34:56] INFO "GET /static/admin/css/changelists.css HTTP/1.1" 200 6395
+[2022-08-26 10:34:56] INFO "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 8919
+[2022-08-26 10:34:56] INFO "GET /static/admin/js/urlify.js HTTP/1.1" 200 7902
+[2022-08-26 10:34:56] INFO "GET /static/admin/js/core.js HTTP/1.1" 200 5698
+[2022-08-26 10:34:56] INFO "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+[2022-08-26 10:34:56] INFO "GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+[2022-08-26 10:34:56] INFO "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 288580
+[2022-08-26 10:34:56] INFO "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+[2022-08-26 10:34:56] INFO "GET /static/admin/js/filters.js HTTP/1.1" 200 966
+[2022-08-26 10:34:56] INFO "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[2022-08-26 10:35:05] INFO "POST /admin/user/user/ HTTP/1.1" 200 7111
+[2022-08-26 10:35:05] INFO "GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+[2022-08-26 10:35:06] INFO "POST /admin/user/user/ HTTP/1.1" 302 0
+[2022-08-26 10:35:06] INFO "GET /admin/user/user/ HTTP/1.1" 200 8199
+[2022-08-26 10:35:06] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 10:35:06] INFO "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+[2022-08-26 10:35:08] INFO "GET /admin/user/user/3/change/ HTTP/1.1" 200 11115
+[2022-08-26 10:35:08] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 10:35:08] INFO "GET /static/admin/css/forms.css HTTP/1.1" 200 8944
+[2022-08-26 10:35:08] INFO "GET /static/admin/js/calendar.js HTTP/1.1" 200 8466
+[2022-08-26 10:35:08] INFO "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19379
+[2022-08-26 10:35:08] INFO "GET /static/admin/css/widgets.css HTTP/1.1" 200 11297
+[2022-08-26 10:35:08] INFO "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+[2022-08-26 10:35:08] INFO "GET /static/admin/js/change_form.js HTTP/1.1" 200 1043
+[2022-08-26 10:35:08] INFO "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+[2022-08-26 10:35:08] INFO "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+[2022-08-26 10:35:09] INFO "GET /admin/user/user/ HTTP/1.1" 200 8064
+[2022-08-26 10:35:24] ERROR Internal Server Error: /users/join
+Traceback (most recent call last):
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\git\backend\unplug\user\views.py", line 116, in join
+    to=[dto.mail],  # 받는 이메일 리스트
+AttributeError: 'JoinRequest' object has no attribute 'mail'
+[2022-08-26 10:35:24] ERROR "POST /users/join HTTP/1.1" 500 97274
+[2022-08-26 10:35:47] INFO C:\git\backend\unplug\user\views.py changed, reloading.
+[2022-08-26 10:35:48] INFO Watching for file changes with StatReloader
+[2022-08-26 10:35:50] WARNING Unauthorized: /users/join
+[2022-08-26 10:35:50] WARNING "POST /users/join HTTP/1.1" 401 50
+[2022-08-26 10:35:59] INFO "GET /admin/user/user/ HTTP/1.1" 200 8275
+[2022-08-26 10:35:59] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 10:36:02] INFO "POST /admin/user/user/ HTTP/1.1" 200 6558
+[2022-08-26 10:36:03] INFO "POST /admin/user/user/ HTTP/1.1" 302 0
+[2022-08-26 10:36:03] INFO "GET /admin/user/user/ HTTP/1.1" 200 8198
+[2022-08-26 10:36:03] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 10:36:07] INFO "POST /users/join HTTP/1.1" 201 49
+[2022-08-26 10:36:20] INFO C:\git\backend\unplug\user\views.py changed, reloading.
+[2022-08-26 10:36:21] INFO Watching for file changes with StatReloader
+[2022-08-26 10:36:31] INFO C:\git\backend\unplug\user\views.py changed, reloading.
+[2022-08-26 10:36:32] INFO Watching for file changes with StatReloader

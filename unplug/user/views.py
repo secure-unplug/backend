@@ -20,6 +20,9 @@ from django.core import serializers
 from electricity.models import Entries
 # load .env
 import re
+from django.core.mail import EmailMessage
+
+
 
 load_dotenv()
 
@@ -39,6 +42,22 @@ class JoinRequest:
         self.password = body['password']
         self.email = body['email']
         self.name = body['name']
+
+
+
+'''
+@api_view(['GET'])
+def send_email(request):
+    email = EmailMessage(
+        '가입을 축하드립니다! 지구를 지켜봐요 ^.^',
+        '화이팅',  # 내용
+        'yyyymimi7246@gmail.com',  # 보내는 이메일 (settings에서 설정해서 작성안해도 됨)
+        to=['yyyy7246@naver.com'],  # 받는 이메일 리스트
+    )
+    email.send()
+'''
+
+
 
 
 @api_view(['POST'])
@@ -87,8 +106,16 @@ def join(request):
     pw_hash = bcrypt.hashpw(pwd.encode('utf-8'), bcrypt.gensalt())
 
     user = User(username=dto.username, password=pw_hash.decode('utf-8'), email=dto.email, name=dto.name)
-    user.save()
 
+    #send_email(request)
+    email = EmailMessage(
+        '가입을 축하드립니다! 지구를 지켜봐요 ^.^',
+        '조그마한 관심이 큰 결과를 만들어요~',  # 내용
+        'yyyymimi7246@gmail.com',  # 보내는 이메일 (settings에서 설정해서 작성안해도 됨)
+        to=[dto.email],  # 받는 이메일 리스트
+    )
+    user.save()
+    email.send()
     return Response({"message": "회원가입에 성공했습니다!"}, status=status.HTTP_201_CREATED)
 
 
