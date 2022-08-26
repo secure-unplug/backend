@@ -58,6 +58,47 @@ def send_email(request):
 '''
 
 
+def keyboard(request):
+    return JsonResponse({
+
+        'type': 'buttons',
+
+        'buttons': ['로그']
+
+    })
+def message(request):
+
+    message = ((request.body).decode('utf-8'))
+
+    request_data = json.loads(message)
+
+    userMessage = request_data['content']
+
+    userType = request_data['type']
+
+
+
+    if userMessage == '로그':
+
+        return JsonResponse({
+
+            'message': {
+
+                'text': '안녕 반가워!',
+
+            },
+
+             'keyboard': {
+
+                'type':'buttons',
+
+                'buttons':['로그']
+
+            }
+
+        })
+
+
 
 
 @api_view(['POST'])
@@ -183,17 +224,9 @@ def get_user_info(request):
 
 @api_view(['PUT'])
 @authenticated
-def update_userinfo(request):
+def update_userinfo_password(request):
     body = json.loads(request.body)
-    user = User.objects.get(username=request.user.username)  # user db
-    new_name = body['name']  # put name
-    if request.user.name == new_name:
-        pass
-    else:
-        name_validation = User.objects.filter(name=new_name)
-        if name_validation:
-            return Response({"message": "이름이 이미 존재합니다."}, status=status.HTTP_401_UNAUTHORIZED)
-    user.name = new_name
+    user = User.objects.get(username=request.user.username)
 
     pwd = body['password']
     if len(pwd) < 10:
@@ -207,6 +240,26 @@ def update_userinfo(request):
 
     pw_hash = bcrypt.hashpw(body['password'].encode('utf-8'), bcrypt.gensalt())
     user.password = pw_hash.decode('utf-8')
+    user.save()
+
+    return Response({"message": "회원 수정을 성공했습니다."})
+
+
+@api_view(['PUT'])
+@authenticated
+def update_userinfo_username(request):
+    body = json.loads(request.body)
+    user = User.objects.get(username=request.user.username)  # user db
+    new_name = body['name']  # put name
+    if request.user.name == new_name:
+        pass
+    else:
+        name_validation = User.objects.filter(name=new_name)
+        if name_validation:
+            return Response({"message": "이름이 이미 존재합니다."}, status=status.HTTP_401_UNAUTHORIZED)
+    user.name = new_name
+
+
     user.save()
 
     return Response({"message": "회원 수정을 성공했습니다."})

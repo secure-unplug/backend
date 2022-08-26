@@ -760,3 +760,136 @@ AttributeError: 'JoinRequest' object has no attribute 'mail'
 [2022-08-26 10:36:21] INFO Watching for file changes with StatReloader
 [2022-08-26 10:36:31] INFO C:\git\backend\unplug\user\views.py changed, reloading.
 [2022-08-26 10:36:32] INFO Watching for file changes with StatReloader
+[2022-08-26 11:34:43] INFO Watching for file changes with StatReloader
+[2022-08-26 11:35:00] INFO "GET /admin HTTP/1.1" 301 0
+[2022-08-26 11:35:00] INFO "GET /admin/ HTTP/1.1" 302 0
+[2022-08-26 11:35:00] INFO "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2222
+[2022-08-26 11:35:03] INFO "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2619
+[2022-08-26 11:35:03] INFO "GET /static/admin/css/login.css HTTP/1.1" 200 958
+[2022-08-26 11:35:03] INFO "GET /static/admin/css/responsive.css HTTP/1.1" 200 18854
+[2022-08-26 11:35:03] INFO "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3763
+[2022-08-26 11:35:03] INFO "GET /static/admin/css/base.css HTTP/1.1" 200 20344
+[2022-08-26 11:35:03] INFO "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 796
+[2022-08-26 11:35:03] INFO "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[2022-08-26 11:35:03] INFO "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+[2022-08-26 11:35:03] INFO "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+[2022-08-26 11:35:03] WARNING Not Found: /favicon.ico
+[2022-08-26 11:35:03] WARNING "GET /favicon.ico HTTP/1.1" 404 2330
+[2022-08-26 11:35:05] INFO "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2385
+[2022-08-26 11:35:05] INFO "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+[2022-08-26 11:35:28] INFO Watching for file changes with StatReloader
+[2022-08-26 11:35:30] INFO "GET /admin/login/?next=/admin/ HTTP/1.1" 200 2222
+[2022-08-26 11:35:32] INFO "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[2022-08-26 11:35:32] INFO "GET /admin/ HTTP/1.1" 200 7284
+[2022-08-26 11:35:33] INFO "GET /static/admin/css/dashboard.css HTTP/1.1" 200 380
+[2022-08-26 11:35:33] INFO "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+[2022-08-26 11:35:33] INFO "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+[2022-08-26 11:35:33] INFO "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+[2022-08-26 11:35:36] INFO "GET /admin/user/user/ HTTP/1.1" 200 8278
+[2022-08-26 11:35:36] INFO "GET /static/admin/css/changelists.css HTTP/1.1" 200 6395
+[2022-08-26 11:35:36] INFO "GET /static/admin/js/core.js HTTP/1.1" 200 5698
+[2022-08-26 11:35:36] INFO "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+[2022-08-26 11:35:36] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 11:35:36] INFO "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 8919
+[2022-08-26 11:35:36] INFO "GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+[2022-08-26 11:35:36] INFO "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+[2022-08-26 11:35:36] INFO "GET /static/admin/js/urlify.js HTTP/1.1" 200 7902
+[2022-08-26 11:35:36] INFO "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 288580
+[2022-08-26 11:35:36] INFO "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+[2022-08-26 11:35:36] INFO "GET /static/admin/js/filters.js HTTP/1.1" 200 966
+[2022-08-26 11:35:36] INFO "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[2022-08-26 11:35:37] INFO "GET /admin/user/device/ HTTP/1.1" 200 6508
+[2022-08-26 11:35:37] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 11:35:38] INFO "GET /admin/electricity/metadata/ HTTP/1.1" 200 6550
+[2022-08-26 11:35:38] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 11:35:38] INFO "GET /admin/electricity/entries/ HTTP/1.1" 200 26511
+[2022-08-26 11:35:38] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 11:35:39] INFO "GET /admin/user/user/ HTTP/1.1" 200 8278
+[2022-08-26 11:35:39] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 11:35:40] INFO "GET /admin/user/user/10/change/ HTTP/1.1" 200 11178
+[2022-08-26 11:35:40] INFO "GET /static/admin/css/forms.css HTTP/1.1" 200 8944
+[2022-08-26 11:35:40] INFO "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19379
+[2022-08-26 11:35:40] INFO "GET /static/admin/js/calendar.js HTTP/1.1" 200 8466
+[2022-08-26 11:35:40] INFO "GET /static/admin/css/widgets.css HTTP/1.1" 200 11297
+[2022-08-26 11:35:40] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 11:35:40] INFO "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+[2022-08-26 11:35:40] INFO "GET /static/admin/js/change_form.js HTTP/1.1" 200 1043
+[2022-08-26 11:35:40] INFO "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+[2022-08-26 11:35:40] INFO "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+[2022-08-26 11:35:41] INFO "GET /admin/user/user/ HTTP/1.1" 200 8278
+[2022-08-26 11:35:42] INFO "GET /admin/user/user/1/change/ HTTP/1.1" 200 11157
+[2022-08-26 11:35:42] INFO "GET /admin/jsi18n/ HTTP/1.1" 200 3343
+[2022-08-26 11:37:37] INFO "POST /users/login HTTP/1.1" 200 210
+[2022-08-26 11:38:33] WARNING Not Found: /users/update_userinfo_password
+[2022-08-26 11:38:33] WARNING "PUT /users/update_userinfo_password HTTP/1.1" 404 3750
+[2022-08-26 11:38:59] INFO Watching for file changes with StatReloader
+[2022-08-26 11:39:04] WARNING Not Found: /users/update_userinfo_password
+[2022-08-26 11:39:04] WARNING "PUT /users/update_userinfo_password HTTP/1.1" 404 3750
+[2022-08-26 11:39:41] INFO C:\git_origin\backend\unplug\user\views.py changed, reloading.
+[2022-08-26 11:39:42] INFO Watching for file changes with StatReloader
+[2022-08-26 11:39:49] INFO C:\git_origin\backend\unplug\user\urls.py changed, reloading.
+[2022-08-26 11:39:49] INFO Watching for file changes with StatReloader
+[2022-08-26 11:39:53] ERROR Internal Server Error: /users/update_userinfo_password
+Traceback (most recent call last):
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\git_origin\backend\unplug\user\decorator.py", line 24, in wrap
+    return function(request, *args, **kwargs)
+  File "C:\git_origin\backend\unplug\user\views.py", line 242, in update_userinfo_password
+    user.password = pw_hash.decode('utf-8')
+NameError: name 'user' is not defined
+[2022-08-26 11:39:53] ERROR "PUT /users/update_userinfo_password HTTP/1.1" 500 101529
+[2022-08-26 11:40:34] INFO C:\git_origin\backend\unplug\user\views.py changed, reloading.
+[2022-08-26 11:40:35] INFO Watching for file changes with StatReloader
+[2022-08-26 11:40:36] INFO "PUT /users/update_userinfo_password HTTP/1.1" 200 50
+[2022-08-26 11:40:53] INFO "POST /users/login HTTP/1.1" 200 210
+[2022-08-26 11:41:26] ERROR Internal Server Error: /users/update_userinfo_username
+Traceback (most recent call last):
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\최승용\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "C:\git_origin\backend\unplug\user\decorator.py", line 24, in wrap
+    return function(request, *args, **kwargs)
+  File "C:\git_origin\backend\unplug\user\views.py", line 253, in update_userinfo_username
+    new_name = body['name']  # put name
+KeyError: 'name'
+[2022-08-26 11:41:26] ERROR "PUT /users/update_userinfo_username HTTP/1.1" 500 100725
+[2022-08-26 11:42:03] INFO "PUT /users/update_userinfo_username HTTP/1.1" 200 50
+[2022-08-26 11:42:12] INFO C:\git_origin\backend\unplug\user\views.py changed, reloading.
+[2022-08-26 11:42:13] INFO Watching for file changes with StatReloader
+[2022-08-26 11:42:18] INFO "PUT /users/update_userinfo_username HTTP/1.1" 200 50
+[2022-08-26 11:42:39] INFO C:\git_origin\backend\unplug\user\views.py changed, reloading.
+[2022-08-26 11:42:40] INFO Watching for file changes with StatReloader
+[2022-08-26 11:42:43] INFO "PUT /users/update_userinfo_username HTTP/1.1" 200 50
+[2022-08-26 11:42:53] INFO "POST /users/login HTTP/1.1" 200 210
